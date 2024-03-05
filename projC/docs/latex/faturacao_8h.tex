@@ -1,0 +1,601 @@
+\hypertarget{faturacao_8h}{}\section{/\+Users/tarly127/\+Documents/\+Git\+Hub/grupo54/grupo54/proj\+C/include/model/faturacao.h File Reference}
+\label{faturacao_8h}\index{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/model/faturacao.h@{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/model/faturacao.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}bool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}listas.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{faturacao_8h_a369266c24eacffb87046522897a570d5}\label{faturacao_8h_a369266c24eacffb87046522897a570d5}} 
+\#define {\bfseries \+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE}
+\item 
+\mbox{\Hypertarget{faturacao_8h_a848bb0e0fe1522d44344445c43d05bec}\label{faturacao_8h_a848bb0e0fe1522d44344445c43d05bec}} 
+\#define {\bfseries M\+A\+X\+B\+U\+F\+S\+I\+ZE}~128
+\item 
+\mbox{\Hypertarget{faturacao_8h_a437ef08681e7210d6678427030446a54}\label{faturacao_8h_a437ef08681e7210d6678427030446a54}} 
+\#define {\bfseries L\+E\+FT}~-\/1
+\item 
+\mbox{\Hypertarget{faturacao_8h_a521e6229e11c089d488ef795efcbcbda}\label{faturacao_8h_a521e6229e11c089d488ef795efcbcbda}} 
+\#define {\bfseries B\+AL}~0
+\item 
+\mbox{\Hypertarget{faturacao_8h_a80fb826a684cf3f0d306b22aa100ddac}\label{faturacao_8h_a80fb826a684cf3f0d306b22aa100ddac}} 
+\#define {\bfseries R\+I\+G\+HT}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct fatura $\ast$ \mbox{\hyperlink{faturacao_8h_a022c6b361697ab2268020a712201ad69}{Faturacao}}
+\begin{DoxyCompactList}\small\item\em Esta estrutura contém variáveis para armazenar alguns valores das linhas de vendas. \end{DoxyCompactList}\item 
+typedef struct avl\+Faturacao $\ast$ \mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}
+\begin{DoxyCompactList}\small\item\em Esta estrutura representa uma A\+VL, ordenada pelo código do produto. \end{DoxyCompactList}\item 
+typedef struct hash\+Faturacao $\ast$ \mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}}
+\begin{DoxyCompactList}\small\item\em Esta estrutura representa uma Hash Table de structs avl\+Faturacao. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{faturacao_8h_a14992e07256afdea7783601d13ee6864}{hashF}} (char $\ast$produto)
+\begin{DoxyCompactList}\small\item\em Calcula a posição da Hash Table hash\+Faturacao corresponde ao código de produto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{faturacao_8h_a022c6b361697ab2268020a712201ad69}{Faturacao}} $\ast$ \mbox{\hyperlink{faturacao_8h_a49e37fbdc5231494b6959ebf6d028137}{init\+Fat}} (char $\ast$campos\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Iniciliza o primeiro elemento de uma lista de structs fatura. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{faturacao_8h_a022c6b361697ab2268020a712201ad69}{Faturacao}} $\ast$ \mbox{\hyperlink{faturacao_8h_aba6e3296471555581dced54a2599fe85}{add\+Fat}} (\mbox{\hyperlink{faturacao_8h_a022c6b361697ab2268020a712201ad69}{Faturacao}} $\ast$f, char $\ast$campos\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Adiciona uma struct fatura à lista de structs fatura. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} \mbox{\hyperlink{faturacao_8h_a7e0fadbda140a1409e749b2678d53c71}{rotate\+Left\+Fat}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fat)
+\begin{DoxyCompactList}\small\item\em Muda a posição dos nodos da árvore para que esta fique balanceada. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} \mbox{\hyperlink{faturacao_8h_ab3d4c27ffd20b6a4291bc2f678098b88}{rotate\+Right\+Fat}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fat)
+\begin{DoxyCompactList}\small\item\em Muda a posição dos nodos da árvore para que esta fique balanceada. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} \mbox{\hyperlink{faturacao_8h_a482e62536be18c1d39b4664bc36bfc4a}{fix\+Right\+Fat}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fat)
+\begin{DoxyCompactList}\small\item\em Verifica o balanceamneto da A\+VL e corrige se for necessário. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} \mbox{\hyperlink{faturacao_8h_a30b13d9d9f5bd145f222667e5951fb90}{fix\+Left\+Fat}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fat)
+\begin{DoxyCompactList}\small\item\em Verifica o balanceamneto da A\+VL e corrige se for necessário. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} \mbox{\hyperlink{faturacao_8h_a37570c6277d1c6e4aa3b051803a992f8}{insert\+Fatura\+Rec}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fat, char $\ast$campos\mbox{[}$\,$\mbox{]}, int $\ast$g, int $\ast$u)
+\begin{DoxyCompactList}\small\item\em Insere um novo nodo na estrutura avl\+Faturacao. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} \mbox{\hyperlink{faturacao_8h_a0030b06917fd4a9223cd1bc15ad0aa60}{insert\+Fatura}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} $\ast$fat, char $\ast$campos\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Define dois inteiros e chama a função insert\+Fatura\+Rec. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}} \mbox{\hyperlink{faturacao_8h_ac4230c2bce036d7f3fd2fdd12c2999b7}{insert\+Hash\+Table\+Fat}} (\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}} f, char $\ast$campos\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Determina a posição na Hash\+Table\+Fat a adicionar o novo elemento. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}} \mbox{\hyperlink{faturacao_8h_a775695dd15dfbc5abbeb8ea9c4b9e5ca}{init\+Hash\+Table\+Fat}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa a struct Hash\+Table\+Fat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8h_aa917b80e82e894af5459ad654a88df6d}{query3\+Fat\+Aux}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fat, char $\ast$produto, int mes, double vals\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Percorre uma struct avl\+Faturacao e vai armazenando em variáveis o total de vendas e o total faturado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8h_a84fc3a331bdabf4dfb72b11f2922920d}{query3\+Fat}} (\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}} fat, char $\ast$produto, int mes, double vals\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Calcula a posição da Hash\+Table\+Fat corresponde ao código de produto recebido e chama a função query3\+Fat\+Aux. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8h_a49cadf4bca1143b23e44de9b33ee5b62}{query3fat\+Fil\+Aux}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fat, char $\ast$produto, int mes, double fils\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Mesmo objetivo que a função query3\+Fat\+Aux mas distinguindo também as 3 filiais para os totais. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8h_a79c4a8f3972a5d5b3cbe280fcb860893}{query3fat\+Fil}} (\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}} fat, char $\ast$produto, int mes, double fils\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Mesmo objetivo que a função query3\+Fat mas distinguindo também as 3 filiais para os totais. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} \mbox{\hyperlink{faturacao_8h_a26a9e6b7e72671a228e62a8b01f7892e}{query4\+Fat\+Aux}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} f, \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} ar, int fil)
+\begin{DoxyCompactList}\small\item\em Percorre uma struct avl\+Faturacao e adicionada a uma struct Array os códigos de produto que ninguém comprou. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} \mbox{\hyperlink{faturacao_8h_aa83781987977a8852bf847d2d51e40e2}{query4\+Fat}} (\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}} f, \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} ar, int fil)
+\begin{DoxyCompactList}\small\item\em Percorre a lista\+A\+V\+L\+Fat presente na struct Hash\+Table\+Fat e chama a função query4\+Fat\+Aux. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8h_a703ae9e355e9e15b8cad5b08470f6361}{query8\+Fat\+Aux}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fat, int mesI, int mesF, int $\ast$vendas, double $\ast$total\+Fat)
+\begin{DoxyCompactList}\small\item\em Percorre uma struct avl\+Faturacao e armazena em variáveis o total de vendas e o total faturado num intervalo de meses. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8h_ac2ec49d8433a4354325fae84c42f9014}{query8\+Fat}} (\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}} fat, int mesI, int mesF, int $\ast$vendas, double $\ast$total\+Fat)
+\begin{DoxyCompactList}\small\item\em Percorre a lista\+A\+V\+L\+Fat presente na struct Hash\+Table\+Fat e chama a função query8\+Fat\+Aux. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} \mbox{\hyperlink{faturacao_8h_a25cb5e98b5a4383a0c189850220fc83d}{query11\+Fat\+Aux}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fat, \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} array)
+\begin{DoxyCompactList}\small\item\em Percorre uma struct avl\+Faturacao e adiciona a uma struct Array2 um código de produto e quantas vezes esse produto foi vendido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} \mbox{\hyperlink{faturacao_8h_ad410606c2cb6ba1b483cb1f9d187072e}{query11\+Fat}} (\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}} fat, \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} array)
+\begin{DoxyCompactList}\small\item\em Percorre a lista\+A\+V\+L\+Fat presente na struct Hash\+Table\+Fat e chama a função query11\+Fat\+Aux. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8h_aad2b0dc024add668b4618b602bbcc08d}{free\+Fatura}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fat, int t)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço das estruturas fatura de um nodo da A\+V\+L\+Fat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8h_abc66b6bfab60d9e82fe1a964255bb075}{free\+A\+V\+L\+Fat}} (\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fat)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço em memória de uma árvore A\+V\+L\+Fat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8h_a5d0fa47698d20a78d695d819b0e569ba}{free\+Fat\+Hash}} (\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}} fat)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço em memória da estrutura Hash\+Table\+Fat. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funções relacionadas com as informações da faturação. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}\label{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}} 
+\index{faturacao.h@{faturacao.h}!AVLFat@{AVLFat}}
+\index{AVLFat@{AVLFat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{AVLFat}{AVLFat}}
+{\footnotesize\ttfamily typedef struct avl\+Faturacao$\ast$ \mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}
+
+
+
+Esta estrutura representa uma A\+VL, ordenada pelo código do produto. 
+
+Além do código do produto cada nodo contém também uma lista de structs fatura, em que a variável t corresponde ao seu tamanho. A variável bal permite o balanceamento da árvore e left e right são apontadores para os \char`\"{}ramos\char`\"{} da esquerda e direita da árvore \mbox{\Hypertarget{faturacao_8h_a022c6b361697ab2268020a712201ad69}\label{faturacao_8h_a022c6b361697ab2268020a712201ad69}} 
+\index{faturacao.h@{faturacao.h}!Faturacao@{Faturacao}}
+\index{Faturacao@{Faturacao}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{Faturacao}{Faturacao}}
+{\footnotesize\ttfamily typedef struct fatura$\ast$ \mbox{\hyperlink{faturacao_8h_a022c6b361697ab2268020a712201ad69}{Faturacao}}}
+
+
+
+Esta estrutura contém variáveis para armazenar alguns valores das linhas de vendas. 
+
+Esses valores são o preço, a quantidade, o tipo, o mês e a filial \mbox{\Hypertarget{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}\label{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}} 
+\index{faturacao.h@{faturacao.h}!HashTableFat@{HashTableFat}}
+\index{HashTableFat@{HashTableFat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{HashTableFat}{HashTableFat}}
+{\footnotesize\ttfamily typedef struct hash\+Faturacao$\ast$ \mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}}}
+
+
+
+Esta estrutura representa uma Hash Table de structs avl\+Faturacao. 
+
+Esta estrutura é inicializada com 26 posições na Hash Table (para cada letra do alfabeto) 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{faturacao_8h_aba6e3296471555581dced54a2599fe85}\label{faturacao_8h_aba6e3296471555581dced54a2599fe85}} 
+\index{faturacao.h@{faturacao.h}!addFat@{addFat}}
+\index{addFat@{addFat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{addFat()}{addFat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{faturacao_8h_a022c6b361697ab2268020a712201ad69}{Faturacao}}$\ast$ add\+Fat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_a022c6b361697ab2268020a712201ad69}{Faturacao}} $\ast$}]{f,  }\item[{char $\ast$}]{campos\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Adiciona uma struct fatura à lista de structs fatura. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & apontador para a lista de structs fatura \\
+\hline
+\mbox{\texttt{ in}}  & {\em campos} & Lista de strings contendo a informação de uma linha do ficheiro das vendas \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & posição onde vai adicionar a nova struct fatura\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Faturacao$\ast$ apontador para uma lista de structs fatura 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_a30b13d9d9f5bd145f222667e5951fb90}\label{faturacao_8h_a30b13d9d9f5bd145f222667e5951fb90}} 
+\index{faturacao.h@{faturacao.h}!fixLeftFat@{fixLeftFat}}
+\index{fixLeftFat@{fixLeftFat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{fixLeftFat()}{fixLeftFat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fix\+Left\+Fat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}]{fat }\end{DoxyParamCaption})}
+
+
+
+Verifica o balanceamneto da A\+VL e corrige se for necessário. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em fat} & apontador para a struct avl\+Faturacao\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+V\+L\+Fat apontador para struct avl\+Faturacao alterada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_a482e62536be18c1d39b4664bc36bfc4a}\label{faturacao_8h_a482e62536be18c1d39b4664bc36bfc4a}} 
+\index{faturacao.h@{faturacao.h}!fixRightFat@{fixRightFat}}
+\index{fixRightFat@{fixRightFat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{fixRightFat()}{fixRightFat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} fix\+Right\+Fat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}]{fat }\end{DoxyParamCaption})}
+
+
+
+Verifica o balanceamneto da A\+VL e corrige se for necessário. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em fat} & apontador para a struct avl\+Faturacao\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+apontador para struct avl\+Faturacao alterada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_abc66b6bfab60d9e82fe1a964255bb075}\label{faturacao_8h_abc66b6bfab60d9e82fe1a964255bb075}} 
+\index{faturacao.h@{faturacao.h}!freeAVLFat@{freeAVLFat}}
+\index{freeAVLFat@{freeAVLFat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{freeAVLFat()}{freeAVLFat()}}
+{\footnotesize\ttfamily void free\+A\+V\+L\+Fat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}]{fat }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço em memória de uma árvore A\+V\+L\+Fat. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fat} & árvore cuja memória vamos libertar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{faturacao_8h_a5d0fa47698d20a78d695d819b0e569ba}\label{faturacao_8h_a5d0fa47698d20a78d695d819b0e569ba}} 
+\index{faturacao.h@{faturacao.h}!freeFatHash@{freeFatHash}}
+\index{freeFatHash@{freeFatHash}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{freeFatHash()}{freeFatHash()}}
+{\footnotesize\ttfamily void free\+Fat\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}}}]{fat }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço em memória da estrutura Hash\+Table\+Fat. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fat} & estrutura Hash\+Table\+Fat cuja memória vamos libertar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{faturacao_8h_aad2b0dc024add668b4618b602bbcc08d}\label{faturacao_8h_aad2b0dc024add668b4618b602bbcc08d}} 
+\index{faturacao.h@{faturacao.h}!freeFatura@{freeFatura}}
+\index{freeFatura@{freeFatura}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{freeFatura()}{freeFatura()}}
+{\footnotesize\ttfamily void free\+Fatura (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}]{fat,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço das estruturas fatura de um nodo da A\+V\+L\+Fat. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fat} & árvore cuja memória vamos libertar \\
+\hline
+\mbox{\texttt{ in}}  & {\em número} & de estruturas do tipo fatura presentes no nodo cuja memória vai ser libertada \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{faturacao_8h_a14992e07256afdea7783601d13ee6864}\label{faturacao_8h_a14992e07256afdea7783601d13ee6864}} 
+\index{faturacao.h@{faturacao.h}!hashF@{hashF}}
+\index{hashF@{hashF}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{hashF()}{hashF()}}
+{\footnotesize\ttfamily int hashF (\begin{DoxyParamCaption}\item[{char $\ast$}]{produto }\end{DoxyParamCaption})}
+
+
+
+Calcula a posição da Hash Table hash\+Faturacao corresponde ao código de produto. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em produto} & O código de produto\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Int correspondente à posição na Hash Table (ou seja à A\+VL) à qual o código de produto corresponde 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_a49e37fbdc5231494b6959ebf6d028137}\label{faturacao_8h_a49e37fbdc5231494b6959ebf6d028137}} 
+\index{faturacao.h@{faturacao.h}!initFat@{initFat}}
+\index{initFat@{initFat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{initFat()}{initFat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{faturacao_8h_a022c6b361697ab2268020a712201ad69}{Faturacao}}$\ast$ init\+Fat (\begin{DoxyParamCaption}\item[{char $\ast$}]{campos\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Iniciliza o primeiro elemento de uma lista de structs fatura. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em campos} & Lista de strings contendo a informação de uma linha do ficheiro das vendas\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Faturacao$\ast$ apontador para uma lista de structs fatura 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_a775695dd15dfbc5abbeb8ea9c4b9e5ca}\label{faturacao_8h_a775695dd15dfbc5abbeb8ea9c4b9e5ca}} 
+\index{faturacao.h@{faturacao.h}!initHashTableFat@{initHashTableFat}}
+\index{initHashTableFat@{initHashTableFat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{initHashTableFat()}{initHashTableFat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}} init\+Hash\+Table\+Fat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa a struct Hash\+Table\+Fat. 
+
+Aloca a memória necessária para a struct Hash\+Table\+Fat (com 26 posições na lista\+A\+V\+L\+Fat) Inicializa cada elemento da lista\+A\+V\+L\+Fat a N\+U\+LL
+
+\begin{DoxyReturn}{Returns}
+Hash\+Table\+Fat inicializada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_a0030b06917fd4a9223cd1bc15ad0aa60}\label{faturacao_8h_a0030b06917fd4a9223cd1bc15ad0aa60}} 
+\index{faturacao.h@{faturacao.h}!insertFatura@{insertFatura}}
+\index{insertFatura@{insertFatura}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{insertFatura()}{insertFatura()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} insert\+Fatura (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} $\ast$}]{fat,  }\item[{char $\ast$}]{campos\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Define dois inteiros e chama a função insert\+Fatura\+Rec. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em $\ast$fat} & apontador para a struct avl\+Faturacao \\
+\hline
+\mbox{\texttt{ in}}  & {\em campos} & Lista de strings contendo a informação de uma linha do ficheiro das vendas\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+V\+L\+Fat apontador para a struct avl\+Faturacao com o novo nodo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_a37570c6277d1c6e4aa3b051803a992f8}\label{faturacao_8h_a37570c6277d1c6e4aa3b051803a992f8}} 
+\index{faturacao.h@{faturacao.h}!insertFaturaRec@{insertFaturaRec}}
+\index{insertFaturaRec@{insertFaturaRec}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{insertFaturaRec()}{insertFaturaRec()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} insert\+Fatura\+Rec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}]{fat,  }\item[{char $\ast$}]{campos\mbox{[}$\,$\mbox{]},  }\item[{int $\ast$}]{g,  }\item[{int $\ast$}]{u }\end{DoxyParamCaption})}
+
+
+
+Insere um novo nodo na estrutura avl\+Faturacao. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em fat} & apontador para a struct avl\+Faturacao \\
+\hline
+\mbox{\texttt{ in}}  & {\em campos} & Lista de strings contendo a informação de uma linha do ficheiro das vendas \\
+\hline
+\mbox{\texttt{ in}}  & {\em g} & apontador para um inteiro \\
+\hline
+\mbox{\texttt{ in}}  & {\em u} & apontador para um inteiro\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+V\+L\+Fat apontador para a struct avl\+Faturacao com o novo nodo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_ac4230c2bce036d7f3fd2fdd12c2999b7}\label{faturacao_8h_ac4230c2bce036d7f3fd2fdd12c2999b7}} 
+\index{faturacao.h@{faturacao.h}!insertHashTableFat@{insertHashTableFat}}
+\index{insertHashTableFat@{insertHashTableFat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{insertHashTableFat()}{insertHashTableFat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}} insert\+Hash\+Table\+Fat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}}}]{f,  }\item[{char $\ast$}]{campos\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Determina a posição na Hash\+Table\+Fat a adicionar o novo elemento. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em f} & apontador para a struct hash\+Faturacao \\
+\hline
+\mbox{\texttt{ in}}  & {\em campos} & Lista de strings contendo a informação de uma linha do ficheiro das vendas\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hash\+Table\+Fat com o novo elemento adicionado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_ad410606c2cb6ba1b483cb1f9d187072e}\label{faturacao_8h_ad410606c2cb6ba1b483cb1f9d187072e}} 
+\index{faturacao.h@{faturacao.h}!query11Fat@{query11Fat}}
+\index{query11Fat@{query11Fat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{query11Fat()}{query11Fat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} query11\+Fat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}}}]{fat,  }\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{array }\end{DoxyParamCaption})}
+
+
+
+Percorre a lista\+A\+V\+L\+Fat presente na struct Hash\+Table\+Fat e chama a função query11\+Fat\+Aux. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fat} & apontador para a struct hash\+Faturacao \\
+\hline
+\mbox{\texttt{ out}}  & {\em array} & apontador para a struct array\+Generico2\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array2 com todos os códigos de produto e correspondente número a indicar quantas vezes foi vendido 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_a25cb5e98b5a4383a0c189850220fc83d}\label{faturacao_8h_a25cb5e98b5a4383a0c189850220fc83d}} 
+\index{faturacao.h@{faturacao.h}!query11FatAux@{query11FatAux}}
+\index{query11FatAux@{query11FatAux}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{query11FatAux()}{query11FatAux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} query11\+Fat\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}]{fat,  }\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{array }\end{DoxyParamCaption})}
+
+
+
+Percorre uma struct avl\+Faturacao e adiciona a uma struct Array2 um código de produto e quantas vezes esse produto foi vendido. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fat} & apontador para a struct avl\+Faturacao \\
+\hline
+\mbox{\texttt{ out}}  & {\em array} & apontador para a struct array\+Generico2\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array2 com os códigos de produto dessa A\+V\+L\+Fat e correspondente número a indicar quantas vezes foi vendido 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_a84fc3a331bdabf4dfb72b11f2922920d}\label{faturacao_8h_a84fc3a331bdabf4dfb72b11f2922920d}} 
+\index{faturacao.h@{faturacao.h}!query3Fat@{query3Fat}}
+\index{query3Fat@{query3Fat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{query3Fat()}{query3Fat()}}
+{\footnotesize\ttfamily void query3\+Fat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}}}]{fat,  }\item[{char $\ast$}]{produto,  }\item[{int}]{mes,  }\item[{double}]{vals\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Calcula a posição da Hash\+Table\+Fat corresponde ao código de produto recebido e chama a função query3\+Fat\+Aux. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fat} & apontador para a struct hash\+Faturacao \\
+\hline
+\mbox{\texttt{ in}}  & {\em código} & do produto \\
+\hline
+\mbox{\texttt{ in}}  & {\em número} & do mês \\
+\hline
+\mbox{\texttt{ out}}  & {\em vals} & lista onde fica armazenado o total de vendas e o total faturado dos dois tipos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{faturacao_8h_aa917b80e82e894af5459ad654a88df6d}\label{faturacao_8h_aa917b80e82e894af5459ad654a88df6d}} 
+\index{faturacao.h@{faturacao.h}!query3FatAux@{query3FatAux}}
+\index{query3FatAux@{query3FatAux}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{query3FatAux()}{query3FatAux()}}
+{\footnotesize\ttfamily void query3\+Fat\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}]{fat,  }\item[{char $\ast$}]{produto,  }\item[{int}]{mes,  }\item[{double}]{vals\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Percorre uma struct avl\+Faturacao e vai armazenando em variáveis o total de vendas e o total faturado. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fat} & apontador para a struct avl\+Faturacao \\
+\hline
+\mbox{\texttt{ in}}  & {\em código} & do produto \\
+\hline
+\mbox{\texttt{ in}}  & {\em número} & do mês \\
+\hline
+\mbox{\texttt{ out}}  & {\em vals} & lista onde fica armazenado o total de vendas e o total faturado dos dois tipos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{faturacao_8h_a79c4a8f3972a5d5b3cbe280fcb860893}\label{faturacao_8h_a79c4a8f3972a5d5b3cbe280fcb860893}} 
+\index{faturacao.h@{faturacao.h}!query3fatFil@{query3fatFil}}
+\index{query3fatFil@{query3fatFil}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{query3fatFil()}{query3fatFil()}}
+{\footnotesize\ttfamily void query3fat\+Fil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}}}]{fat,  }\item[{char $\ast$}]{produto,  }\item[{int}]{mes,  }\item[{double}]{fils\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Mesmo objetivo que a função query3\+Fat mas distinguindo também as 3 filiais para os totais. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fat} & apontador para a struct hash\+Faturacao \\
+\hline
+\mbox{\texttt{ in}}  & {\em código} & do produto \\
+\hline
+\mbox{\texttt{ in}}  & {\em número} & do mês \\
+\hline
+\mbox{\texttt{ out}}  & {\em fils} & lista onde ficam armazenados os vários valores pretendidos\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{faturacao_8h_a84fc3a331bdabf4dfb72b11f2922920d}{query3\+Fat}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{faturacao_8h_a49cadf4bca1143b23e44de9b33ee5b62}\label{faturacao_8h_a49cadf4bca1143b23e44de9b33ee5b62}} 
+\index{faturacao.h@{faturacao.h}!query3fatFilAux@{query3fatFilAux}}
+\index{query3fatFilAux@{query3fatFilAux}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{query3fatFilAux()}{query3fatFilAux()}}
+{\footnotesize\ttfamily void query3fat\+Fil\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}]{fat,  }\item[{char $\ast$}]{produto,  }\item[{int}]{mes,  }\item[{double}]{fils\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Mesmo objetivo que a função query3\+Fat\+Aux mas distinguindo também as 3 filiais para os totais. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fat} & apontador para a struct avl\+Faturacao \\
+\hline
+\mbox{\texttt{ in}}  & {\em código} & do produto \\
+\hline
+\mbox{\texttt{ in}}  & {\em número} & do mês \\
+\hline
+\mbox{\texttt{ out}}  & {\em fils} & lista onde ficam armazenados os vários valores pretendidos\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+query3fat\+Aux 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{faturacao_8h_aa83781987977a8852bf847d2d51e40e2}\label{faturacao_8h_aa83781987977a8852bf847d2d51e40e2}} 
+\index{faturacao.h@{faturacao.h}!query4Fat@{query4Fat}}
+\index{query4Fat@{query4Fat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{query4Fat()}{query4Fat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} query4\+Fat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}}}]{f,  }\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{ar,  }\item[{int}]{fil }\end{DoxyParamCaption})}
+
+
+
+Percorre a lista\+A\+V\+L\+Fat presente na struct Hash\+Table\+Fat e chama a função query4\+Fat\+Aux. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & apontador para a struct hash\+Faturacao \\
+\hline
+\mbox{\texttt{ out}}  & {\em ar} & apontador para uma struct array\+Generico \\
+\hline
+\mbox{\texttt{ in}}  & {\em fil} & número da filial\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array com os códigos de produto que ninguém comprou 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_a26a9e6b7e72671a228e62a8b01f7892e}\label{faturacao_8h_a26a9e6b7e72671a228e62a8b01f7892e}} 
+\index{faturacao.h@{faturacao.h}!query4FatAux@{query4FatAux}}
+\index{query4FatAux@{query4FatAux}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{query4FatAux()}{query4FatAux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} query4\+Fat\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}]{f,  }\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{ar,  }\item[{int}]{fil }\end{DoxyParamCaption})}
+
+
+
+Percorre uma struct avl\+Faturacao e adicionada a uma struct Array os códigos de produto que ninguém comprou. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & apontador para a struct avl\+Faturacao \\
+\hline
+\mbox{\texttt{ out}}  & {\em ar} & apontador para uma struct array\+Generico \\
+\hline
+\mbox{\texttt{ in}}  & {\em fil} & número da filial\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array com os códigos de produto que ninguém comprou 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_ac2ec49d8433a4354325fae84c42f9014}\label{faturacao_8h_ac2ec49d8433a4354325fae84c42f9014}} 
+\index{faturacao.h@{faturacao.h}!query8Fat@{query8Fat}}
+\index{query8Fat@{query8Fat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{query8Fat()}{query8Fat()}}
+{\footnotesize\ttfamily void query8\+Fat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_a7478916aa2842fdb47348f001e7211ac}{Hash\+Table\+Fat}}}]{fat,  }\item[{int}]{mesI,  }\item[{int}]{mesF,  }\item[{int $\ast$}]{vendas,  }\item[{double $\ast$}]{total\+Fat }\end{DoxyParamCaption})}
+
+
+
+Percorre a lista\+A\+V\+L\+Fat presente na struct Hash\+Table\+Fat e chama a função query8\+Fat\+Aux. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fat} & apontador para a struct hash\+Faturacao \\
+\hline
+\mbox{\texttt{ in}}  & {\em mesI} & mes inicial do intervalo \\
+\hline
+\mbox{\texttt{ in}}  & {\em mesF} & mes final do intervalo \\
+\hline
+\mbox{\texttt{ out}}  & {\em vendas} & apontador para um inteiro onde fica armazenado o total de vendas \\
+\hline
+\mbox{\texttt{ out}}  & {\em total\+Fat} & apontador para um double onde fica armazenado o total faturado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{faturacao_8h_a703ae9e355e9e15b8cad5b08470f6361}\label{faturacao_8h_a703ae9e355e9e15b8cad5b08470f6361}} 
+\index{faturacao.h@{faturacao.h}!query8FatAux@{query8FatAux}}
+\index{query8FatAux@{query8FatAux}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{query8FatAux()}{query8FatAux()}}
+{\footnotesize\ttfamily void query8\+Fat\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}]{fat,  }\item[{int}]{mesI,  }\item[{int}]{mesF,  }\item[{int $\ast$}]{vendas,  }\item[{double $\ast$}]{total\+Fat }\end{DoxyParamCaption})}
+
+
+
+Percorre uma struct avl\+Faturacao e armazena em variáveis o total de vendas e o total faturado num intervalo de meses. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fat} & apontador para a struct avl\+Faturacao \\
+\hline
+\mbox{\texttt{ in}}  & {\em mesI} & mes inicial do intervalo \\
+\hline
+\mbox{\texttt{ in}}  & {\em mesF} & mes final do intervalo \\
+\hline
+\mbox{\texttt{ out}}  & {\em vendas} & apontador para um inteiro onde fica armazenado o total de vendas \\
+\hline
+\mbox{\texttt{ out}}  & {\em total\+Fat} & apontador para um double onde fica armazenado o total faturado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{faturacao_8h_a7e0fadbda140a1409e749b2678d53c71}\label{faturacao_8h_a7e0fadbda140a1409e749b2678d53c71}} 
+\index{faturacao.h@{faturacao.h}!rotateLeftFat@{rotateLeftFat}}
+\index{rotateLeftFat@{rotateLeftFat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{rotateLeftFat()}{rotateLeftFat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} rotate\+Left\+Fat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}]{fat }\end{DoxyParamCaption})}
+
+
+
+Muda a posição dos nodos da árvore para que esta fique balanceada. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fat} & apontador para a struct avl\+Faturacao\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+V\+L\+Fat apontador para struct avl\+Faturacao alterada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{faturacao_8h_ab3d4c27ffd20b6a4291bc2f678098b88}\label{faturacao_8h_ab3d4c27ffd20b6a4291bc2f678098b88}} 
+\index{faturacao.h@{faturacao.h}!rotateRightFat@{rotateRightFat}}
+\index{rotateRightFat@{rotateRightFat}!faturacao.h@{faturacao.h}}
+\subsubsection{\texorpdfstring{rotateRightFat()}{rotateRightFat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}} rotate\+Right\+Fat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faturacao_8h_ab36e5a72db071ee404bcb43ce63fe104}{A\+V\+L\+Fat}}}]{fat }\end{DoxyParamCaption})}
+
+
+
+Muda a posição dos nodos da árvore para que esta fique balanceada. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em fat} & apontador para a struct avl\+Faturacao\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+V\+L\+Fat apontador para struct avl\+Faturacao alterada 
+\end{DoxyReturn}

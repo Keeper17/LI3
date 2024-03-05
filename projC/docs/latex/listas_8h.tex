@@ -1,0 +1,1035 @@
+\hypertarget{listas_8h}{}\section{/\+Users/tarly127/\+Documents/\+Git\+Hub/grupo54/grupo54/proj\+C/include/model/listas.h File Reference}
+\label{listas_8h}\index{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/model/listas.h@{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/model/listas.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}bool.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{listas_8h_a369266c24eacffb87046522897a570d5}\label{listas_8h_a369266c24eacffb87046522897a570d5}} 
+\#define {\bfseries \+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE}
+\item 
+\mbox{\Hypertarget{listas_8h_a521e6229e11c089d488ef795efcbcbda}\label{listas_8h_a521e6229e11c089d488ef795efcbcbda}} 
+\#define {\bfseries B\+AL}~0
+\item 
+\mbox{\Hypertarget{listas_8h_a2de9c2f6b9ba1066c11c72a1a2dd23cf}\label{listas_8h_a2de9c2f6b9ba1066c11c72a1a2dd23cf}} 
+\#define {\bfseries E\+SQ}~-\/1
+\item 
+\mbox{\Hypertarget{listas_8h_a6c8de73bb604d91743c7f6f356eb171e}\label{listas_8h_a6c8de73bb604d91743c7f6f356eb171e}} 
+\#define {\bfseries D\+IR}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{listas_8h_a6a71d5c80222075499ce14630e57b437}\label{listas_8h_a6a71d5c80222075499ce14630e57b437}} 
+typedef struct array\+Generico $\ast$ \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}
+\begin{DoxyCompactList}\small\item\em Estrutura de dados que guarda um array de strings e o seu tamanho. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{listas_8h_addcc928167867fc733252043c874bc60}\label{listas_8h_addcc928167867fc733252043c874bc60}} 
+typedef struct array\+Generico2 $\ast$ \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}
+\begin{DoxyCompactList}\small\item\em Estrutura que guarda um array de strings e um de inteiros de tamanhos iguais, juntamente com os seus tamanho. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}\label{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}} 
+typedef struct array\+Generico3 $\ast$ \mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}}
+\begin{DoxyCompactList}\small\item\em Estrutura que guarda um array de strings e um de reais de tamanhos iguais, juntamente com os seus tamanho. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}\label{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}} 
+typedef struct array\+Generico4 $\ast$ \mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}}
+\begin{DoxyCompactList}\small\item\em Estrutura que guarda um array de strings e 3 matrizes de inteiros (com 2 linhas), juntamente com os seus tamnhos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{listas_8h_a6a3f31095e094ee0ea8908ba5f8ac910}\label{listas_8h_a6a3f31095e094ee0ea8908ba5f8ac910}} 
+typedef struct avl $\ast$ \mbox{\hyperlink{listas_8h_a6a3f31095e094ee0ea8908ba5f8ac910}{A\+VL}}
+\begin{DoxyCompactList}\small\item\em A\+VL com um string e um inteiro em cada nodo, utilizada para ordenação. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{listas_8h_a7dd8b4a6ef85cff59f27477afde52bc4}\label{listas_8h_a7dd8b4a6ef85cff59f27477afde52bc4}} 
+typedef struct avlF $\ast$ \mbox{\hyperlink{listas_8h_a7dd8b4a6ef85cff59f27477afde52bc4}{A\+V\+LF}}
+\begin{DoxyCompactList}\small\item\em A\+VL com um string e um real em cada nodo, utilizada para ordenação. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}\label{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}} 
+typedef struct pair $\ast$ \mbox{\hyperlink{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}{Pair}}
+\begin{DoxyCompactList}\small\item\em Estrutura que representa um par de inteiros. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{listas_8h_a7532def9a333a35f04194bde74010cfe}\label{listas_8h_a7532def9a333a35f04194bde74010cfe}} 
+typedef struct pair2 $\ast$ \mbox{\hyperlink{listas_8h_a7532def9a333a35f04194bde74010cfe}{Pair2}}
+\begin{DoxyCompactList}\small\item\em Estrutura que representa um par cujo primeiro elemento é um inteiro e o segundo um double. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}\label{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}} 
+typedef struct cods\+NP $\ast$ \mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}}
+\begin{DoxyCompactList}\small\item\em Estrutura que guarda 2 arrays de strings juntamente com os seus tamanhos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} \mbox{\hyperlink{listas_8h_a1c91a955114d9a649e4822307f3434a4}{init\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Função de inicialização da estrutura Array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} \mbox{\hyperlink{listas_8h_af8f20d3a8ade6d2d21e5274974786992}{add\+To\+Array}} (\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} a, char $\ast$c)
+\begin{DoxyCompactList}\small\item\em Função de inserção de uma string no Array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{listas_8h_ab592cff7d727e1e94385027932108361}{free\+Array}} (\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} a)
+\begin{DoxyCompactList}\small\item\em Função de libertação da memória de um apontador para Array. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \mbox{\hyperlink{listas_8h_a20c3377d40c143b2f0ea1b5c81091cc4}{get\+Array}} (\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} a)
+\begin{DoxyCompactList}\small\item\em Getter do atributo array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{listas_8h_ac9d31ef0ea67f9abc9386173449ac8ba}{get\+Tam}} (\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} a)
+\begin{DoxyCompactList}\small\item\em Getter do atributo tam. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} \mbox{\hyperlink{listas_8h_ad4154b265b08f07e78d24385eb340ccb}{init\+Array2}} ()
+\begin{DoxyCompactList}\small\item\em Função de inicialização da estrutura Array2. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{listas_8h_a99f81879c2029590df003dec03a5a533}{existe\+String}} (\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} s, char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Função para verificar se uma dada string já existe no atributo arrayC. Se existir, devolve a posição do mesmo, caso contrário devolve -\/1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} \mbox{\hyperlink{listas_8h_aaf105b711399b30479328d596b8008ad}{simple\+Add\+To\+Array2}} (\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} a, char $\ast$c, int q)
+\begin{DoxyCompactList}\small\item\em Função de inserção de uma string no Array2, bem como do seu valor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} \mbox{\hyperlink{listas_8h_a38c354c85afe725f7e9cf37a3c3619e9}{add\+To\+Array2}} (\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} a, char $\ast$c, int q)
+\begin{DoxyCompactList}\small\item\em Função de inserção de uma string no Array2, bem como do seu valor. Caso ela já exista, em vez de ser adicionada apenas é somado o novo valor ao antigo. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \mbox{\hyperlink{listas_8h_adb57ac0bb0c566c101e7afc6af053efb}{get\+Array2C}} (\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} a)
+\begin{DoxyCompactList}\small\item\em Getter do atributo arrayC. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{listas_8h_abf332979d91a3aafb7946cd74ace62b3}{get\+Array2I}} (\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} a)
+\begin{DoxyCompactList}\small\item\em Getter do atributo arrayI. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{listas_8h_aba45087f95eee7cfa5e03d26cf64a66f}{get\+Tam2}} (\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} a)
+\begin{DoxyCompactList}\small\item\em Getter do atributo tam. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{listas_8h_af606f2df7913a445597982a1184a4a20}{free\+Array2}} (\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} a)
+\begin{DoxyCompactList}\small\item\em Função de libertação da memória de um apontador para Array2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} \mbox{\hyperlink{listas_8h_a64597ba3616be0e49ae764e9e22a7828}{free\+Array2\+Tam}} (\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} a, int tam)
+\begin{DoxyCompactList}\small\item\em Função de libertação de uma porção de memória do Array2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} \mbox{\hyperlink{listas_8h_a625c6ce0e1e2708a7bf9035152476b55}{sort\+Array2\+Dec}} (\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} ar)
+\begin{DoxyCompactList}\small\item\em Função de ordenação do Array2 por ordem decrescente, utilizando uma A\+VL. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} \mbox{\hyperlink{listas_8h_a52e954d83e1d55993f5395f3c90601ef}{init\+Array3}} ()
+\begin{DoxyCompactList}\small\item\em Função de inicialização da estrutura Array3. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{listas_8h_af6313bb2709fd491466120e60dd9d769}{existe\+String3}} (\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} s, char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Função para verificar se uma dada string já existe no atributo arrayC. Se existir, devolve a posição do mesmo, caso contrário devolve -\/1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} \mbox{\hyperlink{listas_8h_a829c90a90c935dc2d1698454a7e28bd5}{simple\+Add\+To\+Array3}} (\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} a, char $\ast$c, float q)
+\begin{DoxyCompactList}\small\item\em Função de inserção de uma string no Array3, bem como do seu valor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} \mbox{\hyperlink{listas_8h_a457d7168738ac9110c427961d43cd51e}{add\+To\+Array3}} (\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} a, char $\ast$c, float q)
+\begin{DoxyCompactList}\small\item\em Função de inserção de uma string no Array3, bem como do seu valor. Caso ela já exista, em vez de ser adicionada apenas é somado o novo valor ao antigo. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \mbox{\hyperlink{listas_8h_a1c5a7b10602b09553f4a88a54fbfc00e}{get\+Array3C}} (\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} a)
+\begin{DoxyCompactList}\small\item\em Getter do atributo arrayC. \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{listas_8h_a91ac3de6fee04142dae506202f2dbbbb}{get\+Array3R}} (\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} a)
+\begin{DoxyCompactList}\small\item\em Getter do atributo arrayR. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{listas_8h_a0c5f3700d13ed1f2447b2e66bd47bf3b}{get\+Tam3}} (\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} a)
+\begin{DoxyCompactList}\small\item\em Getter do atributo tam. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{listas_8h_a290d5ae88ce8d077c52d5c38922de24f}{free\+Array3}} (\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} a)
+\begin{DoxyCompactList}\small\item\em Função de libertação da memória de um apontador para Array3. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} \mbox{\hyperlink{listas_8h_a133af3471819be6234c5f55df04cbbe9}{free\+Array3\+Tam}} (\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} a, int tam)
+\begin{DoxyCompactList}\small\item\em Função de libertação de uma porção de memória do Array3. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} \mbox{\hyperlink{listas_8h_af8dceda2844af8c39fe90428e2b5d795}{sort\+Array3\+Dec}} (\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} ar)
+\begin{DoxyCompactList}\small\item\em Função de ordenação do Array2 por ordem decrescente, utilizando uma A\+V\+LF. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} \mbox{\hyperlink{listas_8h_a770daec8932cab084db15259d72258e9}{init\+Array4}} (int tamanho)
+\begin{DoxyCompactList}\small\item\em Função de inicialização da estrutura Array4. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} \mbox{\hyperlink{listas_8h_a4f629ef12d516f7046bab82fda5b1fe1}{preenche\+Produtos\+Array4}} (\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} ar, \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} array)
+\begin{DoxyCompactList}\small\item\em Função para preencher a lista arrayC da estrutura Array4 com os valores da lista também arrayC da estrutura Array2 passada como argumento. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{listas_8h_a94ae6180c7c89ffb872e4c419727300e}{verifica\+Prod\+Array4}} (\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} ar, char $\ast$prod, int pos)
+\begin{DoxyCompactList}\small\item\em Função que verifica se um código de produto existe numa dada posição da lista arrayC da estrutura Array4 passada como argumento. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} \mbox{\hyperlink{listas_8h_a5583f1cee64bbd52d89c9ecbb9ff7f4a}{adiciona\+Cli\+Fil}} (\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} ar, int pos, int fil)
+\begin{DoxyCompactList}\small\item\em Função que incrementa por 1 a linha 0 e a coluna recebida como argumento de uma das matrizes da estrutura Array4 (dependente da filial) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} \mbox{\hyperlink{listas_8h_a96e972001025ec4536ae909ed30741b5}{adiciona\+Qnt\+Fil}} (\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} ar, int qnt, int pos, int fil)
+\begin{DoxyCompactList}\small\item\em Função que incrementa pela quantidade a linha 1 e a coluna recebida como argumento de uma das matrizes da estrutura Array4 (dependente da filial) \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \mbox{\hyperlink{listas_8h_afcf5281a2829105b6cdd4c39eb6bf02b}{get\+Array4C}} (\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} a)
+\begin{DoxyCompactList}\small\item\em Getter do atributo arrayC. \end{DoxyCompactList}\item 
+int $\ast$$\ast$ \mbox{\hyperlink{listas_8h_ac3517e49bf22ebecc2c4ad817b10b5d0}{get\+Array4\+Fil}} (\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} a, int fil)
+\begin{DoxyCompactList}\small\item\em Getter do atributo array\+Fil1, array\+Fil2 ou array\+Fil3. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{listas_8h_a598aa808d02a429ec6a8df1974dae58e}{get\+Tam4}} (\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} a)
+\begin{DoxyCompactList}\small\item\em Getter do atributo tam. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{listas_8h_a435dc7de098d7a6d86e5809a1417e6e7}{free\+Array4}} (\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} a)
+\begin{DoxyCompactList}\small\item\em Função de libertação da memória de um apontador para Array4. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}{Pair}} \mbox{\hyperlink{listas_8h_a2975baaf0cbc525b7354cb104a0a8f47}{init\+Pair}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Função de inicialização de um Pair. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{listas_8h_abfea02df6dd6774df687f397de13445c}{getX}} (\mbox{\hyperlink{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}{Pair}} p)
+\begin{DoxyCompactList}\small\item\em Getter para o atributo x. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{listas_8h_a01942fa537e25315c4ec2ce5d0c9fa5c}{getY}} (\mbox{\hyperlink{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}{Pair}} p)
+\begin{DoxyCompactList}\small\item\em Getter para o atributo y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{listas_8h_a6cb1201477efcdd1505f990b62c624a6}{free\+Pair}} (\mbox{\hyperlink{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}{Pair}} p)
+\begin{DoxyCompactList}\small\item\em Função para libertação de memória de uma estrutura Pair. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a7532def9a333a35f04194bde74010cfe}{Pair2}} \mbox{\hyperlink{listas_8h_a13b6ed1512f96dba000993bbdd521c93}{init\+Pair2}} (int x, double y)
+\begin{DoxyCompactList}\small\item\em Função de inicialização da estrutura Pair2. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{listas_8h_a73a822e78085e08208a8271803c50425}{get\+X2}} (\mbox{\hyperlink{listas_8h_a7532def9a333a35f04194bde74010cfe}{Pair2}} p)
+\begin{DoxyCompactList}\small\item\em Getter para o atributo x. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{listas_8h_a352fea9b6303a8450bf48628c8b5c52e}{get\+Y2}} (\mbox{\hyperlink{listas_8h_a7532def9a333a35f04194bde74010cfe}{Pair2}} p)
+\begin{DoxyCompactList}\small\item\em Getter para o atributo y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{listas_8h_a2e2ce3a63f2307b42f0fbb09bff0bcc0}{free\+Pair2}} (\mbox{\hyperlink{listas_8h_a7532def9a333a35f04194bde74010cfe}{Pair2}} p)
+\begin{DoxyCompactList}\small\item\em Função para libertação de memória de uma estrutura Pair2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} \mbox{\hyperlink{listas_8h_ae7dd69a748d5a9bdc5fffcf4f206d08d}{init\+Cods}} ()
+\begin{DoxyCompactList}\small\item\em Função de inicialização de um Cods. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} \mbox{\hyperlink{listas_8h_aec7414268253cd0817b72c7a9cb110d4}{add\+To\+CodsN}} (\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} c, char $\ast$cod)
+\begin{DoxyCompactList}\small\item\em Função que insere um char$\ast$ à componente codsN da estrutura Cods. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} \mbox{\hyperlink{listas_8h_a2c173d6d2dcf1d8ab4a164cbfd7d4717}{add\+To\+CodsP}} (\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} c, char $\ast$cod)
+\begin{DoxyCompactList}\small\item\em Função que insere um char$\ast$ à componente codsP da estrutura Cods. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \mbox{\hyperlink{listas_8h_a7d772f50322502be8d8c843387408eaf}{get\+CodsN}} (\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} c)
+\begin{DoxyCompactList}\small\item\em Getter para a lista codsN. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \mbox{\hyperlink{listas_8h_a063cf9d57ebd2d7f910c956c48cec655}{get\+CodsP}} (\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} c)
+\begin{DoxyCompactList}\small\item\em Getter para a lista codsP. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{listas_8h_a41c42f3319156005bfee1a2f86bb79d9}{getN}} (\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} c)
+\begin{DoxyCompactList}\small\item\em Getter para o tamanho da lista codsN. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{listas_8h_a2fc589aaa8d41fa8781146116a3146cf}{getP}} (\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} c)
+\begin{DoxyCompactList}\small\item\em Getter para o tamanho da lista codsP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{listas_8h_a62c4be1fe122c6365c3ebd91f3359b84}{free\+Cods}} (\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} c)
+\begin{DoxyCompactList}\small\item\em Função para libertação de memória de uma estrutura Cods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funções e estruturas para guardar informações para as queries. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{listas_8h_af8f20d3a8ade6d2d21e5274974786992}\label{listas_8h_af8f20d3a8ade6d2d21e5274974786992}} 
+\index{listas.h@{listas.h}!addToArray@{addToArray}}
+\index{addToArray@{addToArray}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{addToArray()}{addToArray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} add\+To\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{a,  }\item[{char $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Função de inserção de uma string no Array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em a} & Array onde vamos fazer a inserção. \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & String a ser inserida. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a38c354c85afe725f7e9cf37a3c3619e9}\label{listas_8h_a38c354c85afe725f7e9cf37a3c3619e9}} 
+\index{listas.h@{listas.h}!addToArray2@{addToArray2}}
+\index{addToArray2@{addToArray2}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{addToArray2()}{addToArray2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} add\+To\+Array2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{a,  }\item[{char $\ast$}]{c,  }\item[{int}]{q }\end{DoxyParamCaption})}
+
+
+
+Função de inserção de uma string no Array2, bem como do seu valor. Caso ela já exista, em vez de ser adicionada apenas é somado o novo valor ao antigo. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em a} & Array2 onde vamos fazer a inserção. \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & String a ser inserida ou atulizada. \\
+\hline
+\mbox{\texttt{ in}}  & {\em q} & Valor a ser inserido. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a457d7168738ac9110c427961d43cd51e}\label{listas_8h_a457d7168738ac9110c427961d43cd51e}} 
+\index{listas.h@{listas.h}!addToArray3@{addToArray3}}
+\index{addToArray3@{addToArray3}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{addToArray3()}{addToArray3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} add\+To\+Array3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}}}]{a,  }\item[{char $\ast$}]{c,  }\item[{float}]{q }\end{DoxyParamCaption})}
+
+
+
+Função de inserção de uma string no Array3, bem como do seu valor. Caso ela já exista, em vez de ser adicionada apenas é somado o novo valor ao antigo. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em a} & Array3 onde vamos fazer a inserção. \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & String a ser inserida ou atulizada. \\
+\hline
+\mbox{\texttt{ in}}  & {\em q} & Valor a ser inserido. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_aec7414268253cd0817b72c7a9cb110d4}\label{listas_8h_aec7414268253cd0817b72c7a9cb110d4}} 
+\index{listas.h@{listas.h}!addToCodsN@{addToCodsN}}
+\index{addToCodsN@{addToCodsN}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{addToCodsN()}{addToCodsN()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} add\+To\+CodsN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}}}]{c,  }\item[{char $\ast$}]{cod }\end{DoxyParamCaption})}
+
+
+
+Função que insere um char$\ast$ à componente codsN da estrutura Cods. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em c} & Estrutura onde queremos adicionar o char$\ast$. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & Código a adicionar a CodsN. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a2c173d6d2dcf1d8ab4a164cbfd7d4717}\label{listas_8h_a2c173d6d2dcf1d8ab4a164cbfd7d4717}} 
+\index{listas.h@{listas.h}!addToCodsP@{addToCodsP}}
+\index{addToCodsP@{addToCodsP}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{addToCodsP()}{addToCodsP()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} add\+To\+CodsP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}}}]{c,  }\item[{char $\ast$}]{cod }\end{DoxyParamCaption})}
+
+
+
+Função que insere um char$\ast$ à componente codsP da estrutura Cods. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em c} & Estrutura onde queremos adicionar o char$\ast$. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & Código a adicionar a CodsP. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a5583f1cee64bbd52d89c9ecbb9ff7f4a}\label{listas_8h_a5583f1cee64bbd52d89c9ecbb9ff7f4a}} 
+\index{listas.h@{listas.h}!adicionaCliFil@{adicionaCliFil}}
+\index{adicionaCliFil@{adicionaCliFil}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{adicionaCliFil()}{adicionaCliFil()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} adiciona\+Cli\+Fil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}}}]{ar,  }\item[{int}]{pos,  }\item[{int}]{fil }\end{DoxyParamCaption})}
+
+
+
+Função que incrementa por 1 a linha 0 e a coluna recebida como argumento de uma das matrizes da estrutura Array4 (dependente da filial) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ar} & apontador para uma estrutura Array4 \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos} & coluna da matriz no qual a linha 0 vai ser incrementada por 1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em fil} & filial que indica qual das 3 matrizes (uma para cada filial) é que se vai modificar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array4 apontador para a estrutura Array4 passada como argumento com as alterações descritas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a96e972001025ec4536ae909ed30741b5}\label{listas_8h_a96e972001025ec4536ae909ed30741b5}} 
+\index{listas.h@{listas.h}!adicionaQntFil@{adicionaQntFil}}
+\index{adicionaQntFil@{adicionaQntFil}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{adicionaQntFil()}{adicionaQntFil()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} adiciona\+Qnt\+Fil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}}}]{ar,  }\item[{int}]{qnt,  }\item[{int}]{pos,  }\item[{int}]{fil }\end{DoxyParamCaption})}
+
+
+
+Função que incrementa pela quantidade a linha 1 e a coluna recebida como argumento de uma das matrizes da estrutura Array4 (dependente da filial) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ar} & apontador para uma estrutura Array4 \\
+\hline
+\mbox{\texttt{ in}}  & {\em qtd} & quantidade a incrementar na posição da matriz \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos} & coluna da matriz no qual a linha 1 vai ser incrementada \\
+\hline
+\mbox{\texttt{ in}}  & {\em fil} & filial que indica qual das 3 matrizes (uma para cada filial) é que se vai modificar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array4 apontador para a estrutura Array4 passada como argumento com as alterações descritas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a99f81879c2029590df003dec03a5a533}\label{listas_8h_a99f81879c2029590df003dec03a5a533}} 
+\index{listas.h@{listas.h}!existeString@{existeString}}
+\index{existeString@{existeString}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{existeString()}{existeString()}}
+{\footnotesize\ttfamily int existe\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{s,  }\item[{char $\ast$}]{string }\end{DoxyParamCaption})}
+
+
+
+Função para verificar se uma dada string já existe no atributo arrayC. Se existir, devolve a posição do mesmo, caso contrário devolve -\/1. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s} & Array2 onde vamos procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em string} & String cuja existência vamos verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro que nos diz a posição onde a string foi encontrada, ou -\/1 caso não seja. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_af6313bb2709fd491466120e60dd9d769}\label{listas_8h_af6313bb2709fd491466120e60dd9d769}} 
+\index{listas.h@{listas.h}!existeString3@{existeString3}}
+\index{existeString3@{existeString3}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{existeString3()}{existeString3()}}
+{\footnotesize\ttfamily int existe\+String3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}}}]{s,  }\item[{char $\ast$}]{string }\end{DoxyParamCaption})}
+
+
+
+Função para verificar se uma dada string já existe no atributo arrayC. Se existir, devolve a posição do mesmo, caso contrário devolve -\/1. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s} & Array3 onde vamos procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em string} & String cuja existência vamos verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro que nos diz a posição onde a string foi encontrada, ou -\/1 caso não seja. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_ab592cff7d727e1e94385027932108361}\label{listas_8h_ab592cff7d727e1e94385027932108361}} 
+\index{listas.h@{listas.h}!freeArray@{freeArray}}
+\index{freeArray@{freeArray}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{freeArray()}{freeArray()}}
+{\footnotesize\ttfamily void free\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Função de libertação da memória de um apontador para Array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Apontador Array a libertar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_af606f2df7913a445597982a1184a4a20}\label{listas_8h_af606f2df7913a445597982a1184a4a20}} 
+\index{listas.h@{listas.h}!freeArray2@{freeArray2}}
+\index{freeArray2@{freeArray2}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{freeArray2()}{freeArray2()}}
+{\footnotesize\ttfamily void free\+Array2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Função de libertação da memória de um apontador para Array2. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Apontador Array2 a libertar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a64597ba3616be0e49ae764e9e22a7828}\label{listas_8h_a64597ba3616be0e49ae764e9e22a7828}} 
+\index{listas.h@{listas.h}!freeArray2Tam@{freeArray2Tam}}
+\index{freeArray2Tam@{freeArray2Tam}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{freeArray2Tam()}{freeArray2Tam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} free\+Array2\+Tam (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{a,  }\item[{int}]{tam }\end{DoxyParamCaption})}
+
+
+
+Função de libertação de uma porção de memória do Array2. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Apontador Array2 a libertar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tam} & Tamanho com que o arrayC e arrayI ficarão depois da libertação da memória. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a290d5ae88ce8d077c52d5c38922de24f}\label{listas_8h_a290d5ae88ce8d077c52d5c38922de24f}} 
+\index{listas.h@{listas.h}!freeArray3@{freeArray3}}
+\index{freeArray3@{freeArray3}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{freeArray3()}{freeArray3()}}
+{\footnotesize\ttfamily void free\+Array3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Função de libertação da memória de um apontador para Array3. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Apontador Array3 a libertar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a133af3471819be6234c5f55df04cbbe9}\label{listas_8h_a133af3471819be6234c5f55df04cbbe9}} 
+\index{listas.h@{listas.h}!freeArray3Tam@{freeArray3Tam}}
+\index{freeArray3Tam@{freeArray3Tam}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{freeArray3Tam()}{freeArray3Tam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} free\+Array3\+Tam (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}}}]{a,  }\item[{int}]{tam }\end{DoxyParamCaption})}
+
+
+
+Função de libertação de uma porção de memória do Array3. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Apontador Array3 a libertar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tam} & Tamanho com que o arrayC e arrayR ficarão depois da libertação da memória. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a435dc7de098d7a6d86e5809a1417e6e7}\label{listas_8h_a435dc7de098d7a6d86e5809a1417e6e7}} 
+\index{listas.h@{listas.h}!freeArray4@{freeArray4}}
+\index{freeArray4@{freeArray4}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{freeArray4()}{freeArray4()}}
+{\footnotesize\ttfamily void free\+Array4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Função de libertação da memória de um apontador para Array4. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Apontador Array4 a libertar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a62c4be1fe122c6365c3ebd91f3359b84}\label{listas_8h_a62c4be1fe122c6365c3ebd91f3359b84}} 
+\index{listas.h@{listas.h}!freeCods@{freeCods}}
+\index{freeCods@{freeCods}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{freeCods()}{freeCods()}}
+{\footnotesize\ttfamily void free\+Cods (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Função para libertação de memória de uma estrutura Cods. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Cods cuja memória vamos libertar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a6cb1201477efcdd1505f990b62c624a6}\label{listas_8h_a6cb1201477efcdd1505f990b62c624a6}} 
+\index{listas.h@{listas.h}!freePair@{freePair}}
+\index{freePair@{freePair}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{freePair()}{freePair()}}
+{\footnotesize\ttfamily void free\+Pair (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}{Pair}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Função para libertação de memória de uma estrutura Pair. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p} & Pair cuja memória vamos libertar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a2e2ce3a63f2307b42f0fbb09bff0bcc0}\label{listas_8h_a2e2ce3a63f2307b42f0fbb09bff0bcc0}} 
+\index{listas.h@{listas.h}!freePair2@{freePair2}}
+\index{freePair2@{freePair2}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{freePair2()}{freePair2()}}
+{\footnotesize\ttfamily void free\+Pair2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a7532def9a333a35f04194bde74010cfe}{Pair2}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Função para libertação de memória de uma estrutura Pair2. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p} & Pair2 cuja memória vamos libertar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a20c3377d40c143b2f0ea1b5c81091cc4}\label{listas_8h_a20c3377d40c143b2f0ea1b5c81091cc4}} 
+\index{listas.h@{listas.h}!getArray@{getArray}}
+\index{getArray@{getArray}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getArray()}{getArray()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Getter do atributo array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Array cujo atirbuto array queremos obter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atributo array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_adb57ac0bb0c566c101e7afc6af053efb}\label{listas_8h_adb57ac0bb0c566c101e7afc6af053efb}} 
+\index{listas.h@{listas.h}!getArray2C@{getArray2C}}
+\index{getArray2C@{getArray2C}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getArray2C()}{getArray2C()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+Array2C (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Getter do atributo arrayC. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Array2 cujo atirbuto arrayC queremos obter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atributo arrayC. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_abf332979d91a3aafb7946cd74ace62b3}\label{listas_8h_abf332979d91a3aafb7946cd74ace62b3}} 
+\index{listas.h@{listas.h}!getArray2I@{getArray2I}}
+\index{getArray2I@{getArray2I}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getArray2I()}{getArray2I()}}
+{\footnotesize\ttfamily int$\ast$ get\+Array2I (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Getter do atributo arrayI. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Array2 cujo atirbuto arrayI queremos obter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atributo arrayI. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a1c5a7b10602b09553f4a88a54fbfc00e}\label{listas_8h_a1c5a7b10602b09553f4a88a54fbfc00e}} 
+\index{listas.h@{listas.h}!getArray3C@{getArray3C}}
+\index{getArray3C@{getArray3C}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getArray3C()}{getArray3C()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+Array3C (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Getter do atributo arrayC. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Array3 cujo atributo arrayC queremos obter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atributo arrayC. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a91ac3de6fee04142dae506202f2dbbbb}\label{listas_8h_a91ac3de6fee04142dae506202f2dbbbb}} 
+\index{listas.h@{listas.h}!getArray3R@{getArray3R}}
+\index{getArray3R@{getArray3R}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getArray3R()}{getArray3R()}}
+{\footnotesize\ttfamily float$\ast$ get\+Array3R (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Getter do atributo arrayR. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Array3 cujo atirbuto arrayR queremos obter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atributo arrayR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_afcf5281a2829105b6cdd4c39eb6bf02b}\label{listas_8h_afcf5281a2829105b6cdd4c39eb6bf02b}} 
+\index{listas.h@{listas.h}!getArray4C@{getArray4C}}
+\index{getArray4C@{getArray4C}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getArray4C()}{getArray4C()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+Array4C (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Getter do atributo arrayC. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Array4 cujo atributo arrayC queremos obter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atributo arrayC. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_ac3517e49bf22ebecc2c4ad817b10b5d0}\label{listas_8h_ac3517e49bf22ebecc2c4ad817b10b5d0}} 
+\index{listas.h@{listas.h}!getArray4Fil@{getArray4Fil}}
+\index{getArray4Fil@{getArray4Fil}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getArray4Fil()}{getArray4Fil()}}
+{\footnotesize\ttfamily int$\ast$$\ast$ get\+Array4\+Fil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}}}]{a,  }\item[{int}]{fil }\end{DoxyParamCaption})}
+
+
+
+Getter do atributo array\+Fil1, array\+Fil2 ou array\+Fil3. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Array4 cujo atributo array\+Fil 1, 2 ou 3 queremos obter. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fil} & filial que indica a matriz a obter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atributo array\+Fil 1, 2 ou 3. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a7d772f50322502be8d8c843387408eaf}\label{listas_8h_a7d772f50322502be8d8c843387408eaf}} 
+\index{listas.h@{listas.h}!getCodsN@{getCodsN}}
+\index{getCodsN@{getCodsN}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getCodsN()}{getCodsN()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+CodsN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Getter para a lista codsN. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Cods de onde vamos fazer get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista CodsN. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a063cf9d57ebd2d7f910c956c48cec655}\label{listas_8h_a063cf9d57ebd2d7f910c956c48cec655}} 
+\index{listas.h@{listas.h}!getCodsP@{getCodsP}}
+\index{getCodsP@{getCodsP}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getCodsP()}{getCodsP()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+CodsP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Getter para a lista codsP. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Cods de onde vamos fazer get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista CodsP. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a41c42f3319156005bfee1a2f86bb79d9}\label{listas_8h_a41c42f3319156005bfee1a2f86bb79d9}} 
+\index{listas.h@{listas.h}!getN@{getN}}
+\index{getN@{getN}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getN()}{getN()}}
+{\footnotesize\ttfamily int getN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Getter para o tamanho da lista codsN. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Cods de onde vamos fazer get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tamanho da lista. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a2fc589aaa8d41fa8781146116a3146cf}\label{listas_8h_a2fc589aaa8d41fa8781146116a3146cf}} 
+\index{listas.h@{listas.h}!getP@{getP}}
+\index{getP@{getP}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getP()}{getP()}}
+{\footnotesize\ttfamily int getP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Getter para o tamanho da lista codsP. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Cods de onde vamos fazer get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tamanho da lista . 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_ac9d31ef0ea67f9abc9386173449ac8ba}\label{listas_8h_ac9d31ef0ea67f9abc9386173449ac8ba}} 
+\index{listas.h@{listas.h}!getTam@{getTam}}
+\index{getTam@{getTam}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getTam()}{getTam()}}
+{\footnotesize\ttfamily int get\+Tam (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Getter do atributo tam. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Array cujo atirbuto tam queremos obter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atributo tam. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_aba45087f95eee7cfa5e03d26cf64a66f}\label{listas_8h_aba45087f95eee7cfa5e03d26cf64a66f}} 
+\index{listas.h@{listas.h}!getTam2@{getTam2}}
+\index{getTam2@{getTam2}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getTam2()}{getTam2()}}
+{\footnotesize\ttfamily int get\+Tam2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Getter do atributo tam. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Array2 cujo atirbuto tam queremos obter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atributo tam. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a0c5f3700d13ed1f2447b2e66bd47bf3b}\label{listas_8h_a0c5f3700d13ed1f2447b2e66bd47bf3b}} 
+\index{listas.h@{listas.h}!getTam3@{getTam3}}
+\index{getTam3@{getTam3}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getTam3()}{getTam3()}}
+{\footnotesize\ttfamily int get\+Tam3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Getter do atributo tam. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Array3 cujo atirbuto tam queremos obter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atributo tam. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a598aa808d02a429ec6a8df1974dae58e}\label{listas_8h_a598aa808d02a429ec6a8df1974dae58e}} 
+\index{listas.h@{listas.h}!getTam4@{getTam4}}
+\index{getTam4@{getTam4}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getTam4()}{getTam4()}}
+{\footnotesize\ttfamily int get\+Tam4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Getter do atributo tam. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Array4 cujo atirbuto tam queremos obter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atributo tam. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_abfea02df6dd6774df687f397de13445c}\label{listas_8h_abfea02df6dd6774df687f397de13445c}} 
+\index{listas.h@{listas.h}!getX@{getX}}
+\index{getX@{getX}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily int getX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}{Pair}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Getter para o atributo x. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p} & Pair de onde vamos fazer get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O atributo x de P. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a73a822e78085e08208a8271803c50425}\label{listas_8h_a73a822e78085e08208a8271803c50425}} 
+\index{listas.h@{listas.h}!getX2@{getX2}}
+\index{getX2@{getX2}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getX2()}{getX2()}}
+{\footnotesize\ttfamily int get\+X2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a7532def9a333a35f04194bde74010cfe}{Pair2}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Getter para o atributo x. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p} & Pair2 onde vamos obter o parâmetro x. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int O atributo x de p. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a01942fa537e25315c4ec2ce5d0c9fa5c}\label{listas_8h_a01942fa537e25315c4ec2ce5d0c9fa5c}} 
+\index{listas.h@{listas.h}!getY@{getY}}
+\index{getY@{getY}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily int getY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}{Pair}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Getter para o atributo y. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p} & Pair de onde vamos fazer get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O atributo y de P. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a352fea9b6303a8450bf48628c8b5c52e}\label{listas_8h_a352fea9b6303a8450bf48628c8b5c52e}} 
+\index{listas.h@{listas.h}!getY2@{getY2}}
+\index{getY2@{getY2}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{getY2()}{getY2()}}
+{\footnotesize\ttfamily double get\+Y2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a7532def9a333a35f04194bde74010cfe}{Pair2}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Getter para o atributo y. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p} & Pair2 onde vamos obter o parâmetro y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double O atributo y de p. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a1c91a955114d9a649e4822307f3434a4}\label{listas_8h_a1c91a955114d9a649e4822307f3434a4}} 
+\index{listas.h@{listas.h}!initArray@{initArray}}
+\index{initArray@{initArray}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{initArray()}{initArray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} init\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de inicialização da estrutura Array. 
+
+\begin{DoxyReturn}{Returns}
+Um apontador para Array inicializado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_ad4154b265b08f07e78d24385eb340ccb}\label{listas_8h_ad4154b265b08f07e78d24385eb340ccb}} 
+\index{listas.h@{listas.h}!initArray2@{initArray2}}
+\index{initArray2@{initArray2}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{initArray2()}{initArray2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} init\+Array2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de inicialização da estrutura Array2. 
+
+\begin{DoxyReturn}{Returns}
+Um apontador para Array2 inicializado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a52e954d83e1d55993f5395f3c90601ef}\label{listas_8h_a52e954d83e1d55993f5395f3c90601ef}} 
+\index{listas.h@{listas.h}!initArray3@{initArray3}}
+\index{initArray3@{initArray3}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{initArray3()}{initArray3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} init\+Array3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de inicialização da estrutura Array3. 
+
+\begin{DoxyReturn}{Returns}
+Um apontador para Array3 inicializado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a770daec8932cab084db15259d72258e9}\label{listas_8h_a770daec8932cab084db15259d72258e9}} 
+\index{listas.h@{listas.h}!initArray4@{initArray4}}
+\index{initArray4@{initArray4}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{initArray4()}{initArray4()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} init\+Array4 (\begin{DoxyParamCaption}\item[{int}]{tamanho }\end{DoxyParamCaption})}
+
+
+
+Função de inicialização da estrutura Array4. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tamanho} & tamanho que as listas presentes nesta estrutura vão ter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um apontador para Array4 inicializado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_ae7dd69a748d5a9bdc5fffcf4f206d08d}\label{listas_8h_ae7dd69a748d5a9bdc5fffcf4f206d08d}} 
+\index{listas.h@{listas.h}!initCods@{initCods}}
+\index{initCods@{initCods}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{initCods()}{initCods()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} init\+Cods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de inicialização de um Cods. 
+
+\begin{DoxyReturn}{Returns}
+Um apontador para Cods 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a2975baaf0cbc525b7354cb104a0a8f47}\label{listas_8h_a2975baaf0cbc525b7354cb104a0a8f47}} 
+\index{listas.h@{listas.h}!initPair@{initPair}}
+\index{initPair@{initPair}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{initPair()}{initPair()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}{Pair}} init\+Pair (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Função de inicialização de um Pair. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & Atributo x do pair. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & Atrbuito y do pair. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um apontador para Pair, com os valores de x e y passados. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a13b6ed1512f96dba000993bbdd521c93}\label{listas_8h_a13b6ed1512f96dba000993bbdd521c93}} 
+\index{listas.h@{listas.h}!initPair2@{initPair2}}
+\index{initPair2@{initPair2}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{initPair2()}{initPair2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a7532def9a333a35f04194bde74010cfe}{Pair2}} init\+Pair2 (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Função de inicialização da estrutura Pair2. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & Atributo x do Pair2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & Atributo y do Pair2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair2 Um apontador para pair2, com os valores de x e y passados como argumento 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_a4f629ef12d516f7046bab82fda5b1fe1}\label{listas_8h_a4f629ef12d516f7046bab82fda5b1fe1}} 
+\index{listas.h@{listas.h}!preencheProdutosArray4@{preencheProdutosArray4}}
+\index{preencheProdutosArray4@{preencheProdutosArray4}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{preencheProdutosArray4()}{preencheProdutosArray4()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} preenche\+Produtos\+Array4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}}}]{ar,  }\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{array }\end{DoxyParamCaption})}
+
+
+
+Função para preencher a lista arrayC da estrutura Array4 com os valores da lista também arrayC da estrutura Array2 passada como argumento. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ar} & apontador para uma estrutura Array4 \\
+\hline
+\mbox{\texttt{ in}}  & {\em array} & apontador para uma estrutura Array2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array4 apontador para a estrutura Array4 passada como argumento com as alterações descritas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_aaf105b711399b30479328d596b8008ad}\label{listas_8h_aaf105b711399b30479328d596b8008ad}} 
+\index{listas.h@{listas.h}!simpleAddToArray2@{simpleAddToArray2}}
+\index{simpleAddToArray2@{simpleAddToArray2}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{simpleAddToArray2()}{simpleAddToArray2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} simple\+Add\+To\+Array2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{a,  }\item[{char $\ast$}]{c,  }\item[{int}]{q }\end{DoxyParamCaption})}
+
+
+
+Função de inserção de uma string no Array2, bem como do seu valor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em a} & Array2 onde vamos fazer a inserção. \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & String a ser inserida. \\
+\hline
+\mbox{\texttt{ in}}  & {\em q} & Valor a ser inserido. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a829c90a90c935dc2d1698454a7e28bd5}\label{listas_8h_a829c90a90c935dc2d1698454a7e28bd5}} 
+\index{listas.h@{listas.h}!simpleAddToArray3@{simpleAddToArray3}}
+\index{simpleAddToArray3@{simpleAddToArray3}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{simpleAddToArray3()}{simpleAddToArray3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} simple\+Add\+To\+Array3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}}}]{a,  }\item[{char $\ast$}]{c,  }\item[{float}]{q }\end{DoxyParamCaption})}
+
+
+
+Função de inserção de uma string no Array3, bem como do seu valor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em a} & Array3 onde vamos fazer a inserção. \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & String a ser inserida. \\
+\hline
+\mbox{\texttt{ in}}  & {\em q} & Valor a ser inserido. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a625c6ce0e1e2708a7bf9035152476b55}\label{listas_8h_a625c6ce0e1e2708a7bf9035152476b55}} 
+\index{listas.h@{listas.h}!sortArray2Dec@{sortArray2Dec}}
+\index{sortArray2Dec@{sortArray2Dec}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{sortArray2Dec()}{sortArray2Dec()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} sort\+Array2\+Dec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{ar }\end{DoxyParamCaption})}
+
+
+
+Função de ordenação do Array2 por ordem decrescente, utilizando uma A\+VL. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ar} & Array2 a ser ordenado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_af8dceda2844af8c39fe90428e2b5d795}\label{listas_8h_af8dceda2844af8c39fe90428e2b5d795}} 
+\index{listas.h@{listas.h}!sortArray3Dec@{sortArray3Dec}}
+\index{sortArray3Dec@{sortArray3Dec}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{sortArray3Dec()}{sortArray3Dec()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} sort\+Array3\+Dec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}}}]{ar }\end{DoxyParamCaption})}
+
+
+
+Função de ordenação do Array2 por ordem decrescente, utilizando uma A\+V\+LF. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ar} & Array3 a ser ordenado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8h_a94ae6180c7c89ffb872e4c419727300e}\label{listas_8h_a94ae6180c7c89ffb872e4c419727300e}} 
+\index{listas.h@{listas.h}!verificaProdArray4@{verificaProdArray4}}
+\index{verificaProdArray4@{verificaProdArray4}!listas.h@{listas.h}}
+\subsubsection{\texorpdfstring{verificaProdArray4()}{verificaProdArray4()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} verifica\+Prod\+Array4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}}}]{ar,  }\item[{char $\ast$}]{prod,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se um código de produto existe numa dada posição da lista arrayC da estrutura Array4 passada como argumento. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ar} & apontador para uma estrutura Array4 \\
+\hline
+\mbox{\texttt{ in}}  & {\em prod} & código do produto a verificar se existe \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos} & posição na lista arrayC da estrutura Array4 que o produto tem de existir return bool se existe ou não \\
+\hline
+\end{DoxyParams}

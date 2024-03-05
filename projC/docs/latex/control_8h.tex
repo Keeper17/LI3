@@ -1,0 +1,645 @@
+\hypertarget{control_8h}{}\section{/\+Users/tarly127/\+Documents/\+Git\+Hub/grupo54/grupo54/proj\+C/include/control/control.h File Reference}
+\label{control_8h}\index{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/control/control.h@{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/control/control.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../model/listas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../model/produtos.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../model/clientes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../model/filial.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../model/faturacao.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../view/view.\+h\char`\"{}}\newline
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}\label{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}} 
+typedef struct sgv $\ast$ \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}
+\begin{DoxyCompactList}\small\item\em Estrutura auxiliar no programa, onde guardamos a informação dos Clientes, Produtos, Filiais, Faturação e ficheiros de leitura. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{control_8h_af0af29efd11f3f009b5a18ed6c9ff19f}\label{control_8h_af0af29efd11f3f009b5a18ed6c9ff19f}} 
+typedef struct file\+Info $\ast$ \mbox{\hyperlink{control_8h_af0af29efd11f3f009b5a18ed6c9ff19f}{FI}}
+\begin{DoxyCompactList}\small\item\em Estrutura auxiliar ao struct sgv onde guardamos a informação dos ficheiros lidos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a14c3840c38c574667ca887b40c5250bb}{init\+S\+GV}} ()
+\begin{DoxyCompactList}\small\item\em Função de inicialição da estrutura S\+GV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{control_8h_a32529faf97b9dbc329b76227a363b2de}{destroy\+S\+GV}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em Função de libertação de memória da estrutura S\+GV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a4ceeb67d3f18046582372743c0d1588b}{load\+S\+G\+V\+From\+Files}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor, char $\ast$clientes, char $\ast$produtos, char $\ast$vendas)
+\begin{DoxyCompactList}\small\item\em (1) Função de preenchimento da estrutura S\+GV a partir dos ficheiros dados. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} \mbox{\hyperlink{control_8h_a17ebee5b59afc03859f0724eca611d7a}{get\+Product\+Started\+By\+Letter}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} sgv, char letter)
+\begin{DoxyCompactList}\small\item\em (2) Função para obter a lista dos produtos começados por uma dada letra. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a4867acc0f928f4f065ded09752aaa452}{get\+Product\+Sales\+And\+Profit}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} sgv, char $\ast$product\+ID, int month)
+\begin{DoxyCompactList}\small\item\em (3) Função para obter onúmero total de vendas e o total faturado com um produto num dado mês \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} \mbox{\hyperlink{control_8h_af54c6eab701f0eef1d2006959cb372be}{get\+Products\+Never\+Bought}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} sgv, int branch\+ID)
+\begin{DoxyCompactList}\small\item\em (4) Função para obter a lista dos produtos nunca comprados numa dada filial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} \mbox{\hyperlink{control_8h_a7ad14ad0adcad0095ee91da4bc4227ff}{get\+Clients\+Of\+All\+Branches}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} sgv)
+\begin{DoxyCompactList}\small\item\em (5) Função para obter a lista dos clientes que compraram em todas as filiais. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}{Pair}} \mbox{\hyperlink{control_8h_ab19c5d6f9276d1a5ff323722c28234ad}{get\+Clients\+And\+Products\+Never\+Bought\+Count}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} sgv)
+\begin{DoxyCompactList}\small\item\em (6) Função para obter o número de Clientes que nunca compraram e Produtos nunca vendidos. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{control_8h_a6ec1b2f6767f72c28dcb1d8c0d5495d3}{get\+Products\+Bought\+By\+Client}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} sgv, char $\ast$client\+ID)
+\begin{DoxyCompactList}\small\item\em (7) Função para obter a quantidade de produtos comprados pelo cliente mês a mês. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a7532def9a333a35f04194bde74010cfe}{Pair2}} \mbox{\hyperlink{control_8h_a07583488c594d484a9d9985dcaff0988}{get\+Sales\+And\+Profit}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} sgv, int min\+Month, int max\+Month)
+\begin{DoxyCompactList}\small\item\em (8) Função para obter o total de vendas e o total faturado num intervalo de meses \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} \mbox{\hyperlink{control_8h_a8fa0f2db4d5f93f0ff9eeb2552e708c9}{get\+Product\+Buyers}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} sgv, char $\ast$product\+ID, int branch)
+\begin{DoxyCompactList}\small\item\em (9) Função para obter os codigos dos clientes que compraram dado produto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} \mbox{\hyperlink{control_8h_ad3e1ed6bcfbbee49b0aaee8097eae72a}{get\+Client\+Favorite\+Products}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} sgv, char $\ast$client\+ID, int month)
+\begin{DoxyCompactList}\small\item\em (10) Função para obter os produtos mais comprados por um cliente num dado mês. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} \mbox{\hyperlink{control_8h_a4110aa3d379aa1176b84a5f4acf39b41}{get\+Top\+Selled\+Products}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} sgv, int limit)
+\begin{DoxyCompactList}\small\item\em (11) Função para obter uma lista dos N produtos mais vendidos, indicando o total de cliente e unidades vendidaas, filial a filial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} \mbox{\hyperlink{control_8h_ae528836c18ca062dcc24c354d60da7d6}{get\+Client\+Top\+Profit\+Products}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} sgv, char $\ast$client\+ID, int limit)
+\begin{DoxyCompactList}\small\item\em (12) Função para obter os N produtos em que um dado cliente gastou mais dinheiro. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_af0af29efd11f3f009b5a18ed6c9ff19f}{FI}} \mbox{\hyperlink{control_8h_af9a804b802e917302d61d02c4ca8cb06}{get\+Current\+Files\+Info}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} sgv)
+\begin{DoxyCompactList}\small\item\em (13) Função para obter a informação dos ficheiros lidos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a129389d36eb45b7ec364e921bcc5b1b6}{ler\+Produtos}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor, char $\ast$path\+Prods)
+\begin{DoxyCompactList}\small\item\em Função para preencher o Catálogo de Produtos de um S\+GV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_aeff1bb17c32c36a8f6f4fa02e2ab5cd2}{ler\+Clientes}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor, char $\ast$path\+Clientes)
+\begin{DoxyCompactList}\small\item\em Função para preencher o Catálogo de Clientes de um S\+GV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a25025c8ccf77f991bc4ee8ceabb7e5ba}{ler\+Vendas}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor, char $\ast$path\+Vendas)
+\begin{DoxyCompactList}\small\item\em Função para preencher as Filiais e Faturação de um S\+GV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a8bba6ee67a6f052c108395f6400bb449}{query1}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 1, que trata do input do utilizador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a61b05cb395f3eb12bd9b7a6daf58c006}{query2}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 2, que trata do input do utilizador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a02891344866a88701a2460adc593ee72}{query3}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 3, que trata do input do utilizador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a13ab619c461d93b0c52a6012ab889d27}{query4}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 4, que trata do input do utilizador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a7b3f6ff0cabf3e3e57429090b300a44f}{query5}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 5, que trata do input do utilizador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a587562c87cf5fdab0d3d2641fe5425d6}{query6}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 6. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a6433e5fd26d4bd753a471da51ccfd6b6}{query7}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 7, que trata do input do utilizador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a8ab5634b414147d1db80d0b514ed5bf4}{query8}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 8, que trata do input do utilizador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a43b2c90e7745e21fc43c55ab1b66e3d0}{query9}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 9, que trata do input do utilizador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_ada56cc8f3557f3ebc18644e2f47e254e}{query10}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 10, que trata do input do utilizador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a172e739320a012290fda1fcecde26b0c}{query11}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 11, que trata do input do utilizador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a332be5c537f307e19ca52e6a65373588}{query12}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 12, que trata do input do utilizador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a514661ef9b1a0d2753fa8f21e70410de}{query13}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em chamada da query 13. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} \mbox{\hyperlink{control_8h_a764b44bf8e6cb584f7c1566122147440}{menu}} (\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} gestor)
+\begin{DoxyCompactList}\small\item\em Função do menu, onde vai ser tratado o input inicial do utilizador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funções relacionadas com o S\+GV, queries e manipulação do input do utilizador. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{control_8h_a32529faf97b9dbc329b76227a363b2de}\label{control_8h_a32529faf97b9dbc329b76227a363b2de}} 
+\index{control.h@{control.h}!destroySGV@{destroySGV}}
+\index{destroySGV@{destroySGV}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{destroySGV()}{destroySGV()}}
+{\footnotesize\ttfamily void destroy\+S\+GV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+Função de libertação de memória da estrutura S\+GV. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em gestor} & S\+GV a ser libertado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_ad3e1ed6bcfbbee49b0aaee8097eae72a}\label{control_8h_ad3e1ed6bcfbbee49b0aaee8097eae72a}} 
+\index{control.h@{control.h}!getClientFavoriteProducts@{getClientFavoriteProducts}}
+\index{getClientFavoriteProducts@{getClientFavoriteProducts}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{getClientFavoriteProducts()}{getClientFavoriteProducts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} get\+Client\+Favorite\+Products (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{sgv,  }\item[{char $\ast$}]{client\+ID,  }\item[{int}]{month }\end{DoxyParamCaption})}
+
+
+
+(10) Função para obter os produtos mais comprados por um cliente num dado mês. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sgv} & S\+GV onde a informação está guardada. \\
+\hline
+\mbox{\texttt{ in}}  & {\em client\+ID} & Código do cliente a procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em month} & Mês que queremos verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Estrutura Array2 com os códigos dos N produtos mais comprados e respetivo número de compras. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_ab19c5d6f9276d1a5ff323722c28234ad}\label{control_8h_ab19c5d6f9276d1a5ff323722c28234ad}} 
+\index{control.h@{control.h}!getClientsAndProductsNeverBoughtCount@{getClientsAndProductsNeverBoughtCount}}
+\index{getClientsAndProductsNeverBoughtCount@{getClientsAndProductsNeverBoughtCount}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{getClientsAndProductsNeverBoughtCount()}{getClientsAndProductsNeverBoughtCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a89d80dc1fc8472e86db2d54f4e0a6dbd}{Pair}} get\+Clients\+And\+Products\+Never\+Bought\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{sgv }\end{DoxyParamCaption})}
+
+
+
+(6) Função para obter o número de Clientes que nunca compraram e Produtos nunca vendidos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sgv} & S\+GV onde a informação que queremos percorrer está guardada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Estrutura Pair contendo os dois números procurados. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_a7ad14ad0adcad0095ee91da4bc4227ff}\label{control_8h_a7ad14ad0adcad0095ee91da4bc4227ff}} 
+\index{control.h@{control.h}!getClientsOfAllBranches@{getClientsOfAllBranches}}
+\index{getClientsOfAllBranches@{getClientsOfAllBranches}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{getClientsOfAllBranches()}{getClientsOfAllBranches()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} get\+Clients\+Of\+All\+Branches (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{sgv }\end{DoxyParamCaption})}
+
+
+
+(5) Função para obter a lista dos clientes que compraram em todas as filiais. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sgv} & S\+GV onde está guardada a informação dos clientes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Estrutura Array com a lista dos clientes encontrados. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_ae528836c18ca062dcc24c354d60da7d6}\label{control_8h_ae528836c18ca062dcc24c354d60da7d6}} 
+\index{control.h@{control.h}!getClientTopProfitProducts@{getClientTopProfitProducts}}
+\index{getClientTopProfitProducts@{getClientTopProfitProducts}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{getClientTopProfitProducts()}{getClientTopProfitProducts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} get\+Client\+Top\+Profit\+Products (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{sgv,  }\item[{char $\ast$}]{client\+ID,  }\item[{int}]{limit }\end{DoxyParamCaption})}
+
+
+
+(12) Função para obter os N produtos em que um dado cliente gastou mais dinheiro. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sgv} & S\+GV onde está guardada a informação. \\
+\hline
+\mbox{\texttt{ in}}  & {\em client\+ID} & Código de cliente a procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em limit} & O número máximo de produtos que queremos encontrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Estrutura Array3 com os N produtos em que gastou mais dinheiro e o total gasto em cada um. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_af9a804b802e917302d61d02c4ca8cb06}\label{control_8h_af9a804b802e917302d61d02c4ca8cb06}} 
+\index{control.h@{control.h}!getCurrentFilesInfo@{getCurrentFilesInfo}}
+\index{getCurrentFilesInfo@{getCurrentFilesInfo}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{getCurrentFilesInfo()}{getCurrentFilesInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_af0af29efd11f3f009b5a18ed6c9ff19f}{FI}} get\+Current\+Files\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{sgv }\end{DoxyParamCaption})}
+
+
+
+(13) Função para obter a informação dos ficheiros lidos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sgv} & S\+GV onde está guardada a informação dos ficheiros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Estrutura com a informação dos ficheiros. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_a8fa0f2db4d5f93f0ff9eeb2552e708c9}\label{control_8h_a8fa0f2db4d5f93f0ff9eeb2552e708c9}} 
+\index{control.h@{control.h}!getProductBuyers@{getProductBuyers}}
+\index{getProductBuyers@{getProductBuyers}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{getProductBuyers()}{getProductBuyers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} get\+Product\+Buyers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{sgv,  }\item[{char $\ast$}]{product\+ID,  }\item[{int}]{branch }\end{DoxyParamCaption})}
+
+
+
+(9) Função para obter os codigos dos clientes que compraram dado produto. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sgv} & S\+GV onde está guardada a informação das filiais. \\
+\hline
+\mbox{\texttt{ in}}  & {\em product\+ID} & Código do produto a procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em branch} & Número da filial onde se vai procurar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Estrutura Cods que contem as listas dos clientes que compraram o produto, bem como os seus tamanhos. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_a4867acc0f928f4f065ded09752aaa452}\label{control_8h_a4867acc0f928f4f065ded09752aaa452}} 
+\index{control.h@{control.h}!getProductSalesAndProfit@{getProductSalesAndProfit}}
+\index{getProductSalesAndProfit@{getProductSalesAndProfit}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{getProductSalesAndProfit()}{getProductSalesAndProfit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} get\+Product\+Sales\+And\+Profit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{sgv,  }\item[{char $\ast$}]{product\+ID,  }\item[{int}]{month }\end{DoxyParamCaption})}
+
+
+
+(3) Função para obter onúmero total de vendas e o total faturado com um produto num dado mês 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sgv} & S\+GV com a informação dos Produtos \\
+\hline
+\mbox{\texttt{ in}}  & {\em product\+ID} & onde está o código do produto \\
+\hline
+\mbox{\texttt{ in}}  & {\em month} & número do mês \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sgv 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_a6ec1b2f6767f72c28dcb1d8c0d5495d3}\label{control_8h_a6ec1b2f6767f72c28dcb1d8c0d5495d3}} 
+\index{control.h@{control.h}!getProductsBoughtByClient@{getProductsBoughtByClient}}
+\index{getProductsBoughtByClient@{getProductsBoughtByClient}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{getProductsBoughtByClient()}{getProductsBoughtByClient()}}
+{\footnotesize\ttfamily int$\ast$ get\+Products\+Bought\+By\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{sgv,  }\item[{char $\ast$}]{client\+ID }\end{DoxyParamCaption})}
+
+
+
+(7) Função para obter a quantidade de produtos comprados pelo cliente mês a mês. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sgv} & S\+GV onde está guardada a informação das filiais. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array com as compras efetuadas em cada mês e em cada filial. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_af54c6eab701f0eef1d2006959cb372be}\label{control_8h_af54c6eab701f0eef1d2006959cb372be}} 
+\index{control.h@{control.h}!getProductsNeverBought@{getProductsNeverBought}}
+\index{getProductsNeverBought@{getProductsNeverBought}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{getProductsNeverBought()}{getProductsNeverBought()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} get\+Products\+Never\+Bought (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{sgv,  }\item[{int}]{branch\+ID }\end{DoxyParamCaption})}
+
+
+
+(4) Função para obter a lista dos produtos nunca comprados numa dada filial. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sgv} & S\+GV onde está guardada a informação dos produtos. \\
+\hline
+\mbox{\texttt{ in}}  & {\em branch\+ID} & Filial onde vamos procurar os produtos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Estrutura Array com a lista dos produtos procurados. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_a17ebee5b59afc03859f0724eca611d7a}\label{control_8h_a17ebee5b59afc03859f0724eca611d7a}} 
+\index{control.h@{control.h}!getProductStartedByLetter@{getProductStartedByLetter}}
+\index{getProductStartedByLetter@{getProductStartedByLetter}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{getProductStartedByLetter()}{getProductStartedByLetter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} get\+Product\+Started\+By\+Letter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{sgv,  }\item[{char}]{letter }\end{DoxyParamCaption})}
+
+
+
+(2) Função para obter a lista dos produtos começados por uma dada letra. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sgv} & S\+GV com a informação dos produtos. \\
+\hline
+\mbox{\texttt{ in}}  & {\em letter} & Letra inicial dos produtos que queremos encontrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Estrutura Array com todos os produtos começados pela letra dada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_a07583488c594d484a9d9985dcaff0988}\label{control_8h_a07583488c594d484a9d9985dcaff0988}} 
+\index{control.h@{control.h}!getSalesAndProfit@{getSalesAndProfit}}
+\index{getSalesAndProfit@{getSalesAndProfit}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{getSalesAndProfit()}{getSalesAndProfit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a7532def9a333a35f04194bde74010cfe}{Pair2}} get\+Sales\+And\+Profit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{sgv,  }\item[{int}]{min\+Month,  }\item[{int}]{max\+Month }\end{DoxyParamCaption})}
+
+
+
+(8) Função para obter o total de vendas e o total faturado num intervalo de meses 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sgv} & S\+GV onde está guardada a informação do módulo Faturaçãonce \\
+\hline
+\mbox{\texttt{ in}}  & {\em min\+Month} & mês de início do intervalo \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+Month} & mês de fim do intervalo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair2 estrutura onde fica guardado um inteiro e um double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_a4110aa3d379aa1176b84a5f4acf39b41}\label{control_8h_a4110aa3d379aa1176b84a5f4acf39b41}} 
+\index{control.h@{control.h}!getTopSelledProducts@{getTopSelledProducts}}
+\index{getTopSelledProducts@{getTopSelledProducts}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{getTopSelledProducts()}{getTopSelledProducts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} get\+Top\+Selled\+Products (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{sgv,  }\item[{int}]{limit }\end{DoxyParamCaption})}
+
+
+
+(11) Função para obter uma lista dos N produtos mais vendidos, indicando o total de cliente e unidades vendidaas, filial a filial. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sgv} & S\+GV onde estão as estruturas que vamos ter de percorrer (faturação e filiais). \\
+\hline
+\mbox{\texttt{ in}}  & {\em limit} & número de produtos mais vendidos a mostrar ao Utilizador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array4 estrutura onde estão armazenados todos os dados necessários a apresentar. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_a14c3840c38c574667ca887b40c5250bb}\label{control_8h_a14c3840c38c574667ca887b40c5250bb}} 
+\index{control.h@{control.h}!initSGV@{initSGV}}
+\index{initSGV@{initSGV}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{initSGV()}{initSGV()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} init\+S\+GV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de inicialição da estrutura S\+GV. 
+
+\begin{DoxyReturn}{Returns}
+S\+GV inicializado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{control_8h_aeff1bb17c32c36a8f6f4fa02e2ab5cd2}\label{control_8h_aeff1bb17c32c36a8f6f4fa02e2ab5cd2}} 
+\index{control.h@{control.h}!lerClientes@{lerClientes}}
+\index{lerClientes@{lerClientes}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{lerClientes()}{lerClientes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} ler\+Clientes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor,  }\item[{char $\ast$}]{path\+Clientes }\end{DoxyParamCaption})}
+
+
+
+Função para preencher o Catálogo de Clientes de um S\+GV. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV a preencher. \\
+\hline
+\mbox{\texttt{ in}}  & {\em path\+Clientes} & Path para o ficheiro com a informação dos clientes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a129389d36eb45b7ec364e921bcc5b1b6}\label{control_8h_a129389d36eb45b7ec364e921bcc5b1b6}} 
+\index{control.h@{control.h}!lerProdutos@{lerProdutos}}
+\index{lerProdutos@{lerProdutos}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{lerProdutos()}{lerProdutos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} ler\+Produtos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor,  }\item[{char $\ast$}]{path\+Prods }\end{DoxyParamCaption})}
+
+
+
+Função para preencher o Catálogo de Produtos de um S\+GV. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV a preencher. \\
+\hline
+\mbox{\texttt{ in}}  & {\em path\+Prods} & Path para o ficheiro com a informação dos produtos. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a25025c8ccf77f991bc4ee8ceabb7e5ba}\label{control_8h_a25025c8ccf77f991bc4ee8ceabb7e5ba}} 
+\index{control.h@{control.h}!lerVendas@{lerVendas}}
+\index{lerVendas@{lerVendas}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{lerVendas()}{lerVendas()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} ler\+Vendas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor,  }\item[{char $\ast$}]{path\+Vendas }\end{DoxyParamCaption})}
+
+
+
+Função para preencher as Filiais e Faturação de um S\+GV. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV a preencher. \\
+\hline
+\mbox{\texttt{ in}}  & {\em path\+Vendas} & Path para o ficheiro com a informação das vendas. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a4ceeb67d3f18046582372743c0d1588b}\label{control_8h_a4ceeb67d3f18046582372743c0d1588b}} 
+\index{control.h@{control.h}!loadSGVFromFiles@{loadSGVFromFiles}}
+\index{loadSGVFromFiles@{loadSGVFromFiles}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{loadSGVFromFiles()}{loadSGVFromFiles()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} load\+S\+G\+V\+From\+Files (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor,  }\item[{char $\ast$}]{clientes,  }\item[{char $\ast$}]{produtos,  }\item[{char $\ast$}]{vendas }\end{DoxyParamCaption})}
+
+
+
+(1) Função de preenchimento da estrutura S\+GV a partir dos ficheiros dados. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV a ser preenchido. \\
+\hline
+\mbox{\texttt{ in}}  & {\em clientes} & Path do ficheiro com a informação dos clientes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em produtos} & Path do ficheiro com a informação dos produtos. \\
+\hline
+\mbox{\texttt{ in}}  & {\em vendas} & Path do ficheiro com a informação das vendas. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a764b44bf8e6cb584f7c1566122147440}\label{control_8h_a764b44bf8e6cb584f7c1566122147440}} 
+\index{control.h@{control.h}!menu@{menu}}
+\index{menu@{menu}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+Função do menu, onde vai ser tratado o input inicial do utilizador. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV a ser tratado, destruído ou inicializado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a8bba6ee67a6f052c108395f6400bb449}\label{control_8h_a8bba6ee67a6f052c108395f6400bb449}} 
+\index{control.h@{control.h}!query1@{query1}}
+\index{query1@{query1}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query1()}{query1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 1, que trata do input do utilizador. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_ada56cc8f3557f3ebc18644e2f47e254e}\label{control_8h_ada56cc8f3557f3ebc18644e2f47e254e}} 
+\index{control.h@{control.h}!query10@{query10}}
+\index{query10@{query10}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query10()}{query10()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query10 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 10, que trata do input do utilizador. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a172e739320a012290fda1fcecde26b0c}\label{control_8h_a172e739320a012290fda1fcecde26b0c}} 
+\index{control.h@{control.h}!query11@{query11}}
+\index{query11@{query11}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query11()}{query11()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query11 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 11, que trata do input do utilizador. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a332be5c537f307e19ca52e6a65373588}\label{control_8h_a332be5c537f307e19ca52e6a65373588}} 
+\index{control.h@{control.h}!query12@{query12}}
+\index{query12@{query12}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query12()}{query12()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query12 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 12, que trata do input do utilizador. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a514661ef9b1a0d2753fa8f21e70410de}\label{control_8h_a514661ef9b1a0d2753fa8f21e70410de}} 
+\index{control.h@{control.h}!query13@{query13}}
+\index{query13@{query13}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query13()}{query13()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query13 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 13. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a61b05cb395f3eb12bd9b7a6daf58c006}\label{control_8h_a61b05cb395f3eb12bd9b7a6daf58c006}} 
+\index{control.h@{control.h}!query2@{query2}}
+\index{query2@{query2}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query2()}{query2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 2, que trata do input do utilizador. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a02891344866a88701a2460adc593ee72}\label{control_8h_a02891344866a88701a2460adc593ee72}} 
+\index{control.h@{control.h}!query3@{query3}}
+\index{query3@{query3}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query3()}{query3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 3, que trata do input do utilizador. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a13ab619c461d93b0c52a6012ab889d27}\label{control_8h_a13ab619c461d93b0c52a6012ab889d27}} 
+\index{control.h@{control.h}!query4@{query4}}
+\index{query4@{query4}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query4()}{query4()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 4, que trata do input do utilizador. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a7b3f6ff0cabf3e3e57429090b300a44f}\label{control_8h_a7b3f6ff0cabf3e3e57429090b300a44f}} 
+\index{control.h@{control.h}!query5@{query5}}
+\index{query5@{query5}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query5()}{query5()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query5 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 5, que trata do input do utilizador. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a587562c87cf5fdab0d3d2641fe5425d6}\label{control_8h_a587562c87cf5fdab0d3d2641fe5425d6}} 
+\index{control.h@{control.h}!query6@{query6}}
+\index{query6@{query6}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query6()}{query6()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query6 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 6. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a6433e5fd26d4bd753a471da51ccfd6b6}\label{control_8h_a6433e5fd26d4bd753a471da51ccfd6b6}} 
+\index{control.h@{control.h}!query7@{query7}}
+\index{query7@{query7}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query7()}{query7()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query7 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 7, que trata do input do utilizador. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a8ab5634b414147d1db80d0b514ed5bf4}\label{control_8h_a8ab5634b414147d1db80d0b514ed5bf4}} 
+\index{control.h@{control.h}!query8@{query8}}
+\index{query8@{query8}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query8()}{query8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 8, que trata do input do utilizador. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{control_8h_a43b2c90e7745e21fc43c55ab1b66e3d0}\label{control_8h_a43b2c90e7745e21fc43c55ab1b66e3d0}} 
+\index{control.h@{control.h}!query9@{query9}}
+\index{query9@{query9}!control.h@{control.h}}
+\subsubsection{\texorpdfstring{query9()}{query9()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}} query9 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{control_8h_a22f90d0d3126acbfb367c7d5dedbd6b7}{S\+GV}}}]{gestor }\end{DoxyParamCaption})}
+
+
+
+chamada da query 9, que trata do input do utilizador. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gestor} & S\+GV que vai ser tratado. \\
+\hline
+\end{DoxyParams}

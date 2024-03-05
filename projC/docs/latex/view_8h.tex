@@ -1,0 +1,380 @@
+\hypertarget{view_8h}{}\section{/\+Users/tarly127/\+Documents/\+Git\+Hub/grupo54/grupo54/proj\+C/include/view/view.h File Reference}
+\label{view_8h}\index{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/view/view.h@{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/view/view.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/ioctl.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../model/listas.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{view_8h_a98a3266304bfa18bcc6b9351ac13689a}{get\+Bash\+Width}} ()
+\begin{DoxyCompactList}\small\item\em Obtem a largura do Terminal. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_a9097afe2cdaa65912f445c0eebc094d3}{get\+Bash\+Height}} ()
+\begin{DoxyCompactList}\small\item\em Obtem a altura do Terminal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_ad71354333fe2a7b0212403a1300ca687}\label{view_8h_ad71354333fe2a7b0212403a1300ca687}} 
+void \mbox{\hyperlink{view_8h_ad71354333fe2a7b0212403a1300ca687}{print\+Erro}} ()
+\begin{DoxyCompactList}\small\item\em Print para erros genéricos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_ab13e858612c64eeef73aff1d8a03945e}\label{view_8h_ab13e858612c64eeef73aff1d8a03945e}} 
+void \mbox{\hyperlink{view_8h_ab13e858612c64eeef73aff1d8a03945e}{print\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Print do menu principal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a4bd5b671be38bc476c868d3625bd3e5a}\label{view_8h_a4bd5b671be38bc476c868d3625bd3e5a}} 
+void \mbox{\hyperlink{view_8h_a4bd5b671be38bc476c868d3625bd3e5a}{print\+Q1A}} ()
+\begin{DoxyCompactList}\small\item\em Pergunta se quer abrir os ficheiros default ou outros. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a0825da76686d284074742489533f1c57}\label{view_8h_a0825da76686d284074742489533f1c57}} 
+void \mbox{\hyperlink{view_8h_a0825da76686d284074742489533f1c57}{print\+Q1B}} ()
+\begin{DoxyCompactList}\small\item\em Pede os novos ficheiros a ler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a972939b178a96c688054b5098588f236}\label{view_8h_a972939b178a96c688054b5098588f236}} 
+void \mbox{\hyperlink{view_8h_a972939b178a96c688054b5098588f236}{print\+Q1C}} ()
+\begin{DoxyCompactList}\small\item\em Informa que os ficheiros foram lidos com sucesso. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_ac5dea86fce1e456fff99e42166a64a7e}\label{view_8h_ac5dea86fce1e456fff99e42166a64a7e}} 
+void \mbox{\hyperlink{view_8h_ac5dea86fce1e456fff99e42166a64a7e}{print\+Q1\+Def}} ()
+\begin{DoxyCompactList}\small\item\em Informa que está a abrir os ficheiros default. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_acaec70af13230486f99300b5bd08fc51}\label{view_8h_acaec70af13230486f99300b5bd08fc51}} 
+void \mbox{\hyperlink{view_8h_acaec70af13230486f99300b5bd08fc51}{print\+Q2A}} ()
+\begin{DoxyCompactList}\small\item\em Pede para inserir uma letra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_acecdf88fc6ea1d8ee7b93472282c780b}{print\+Q2B}} (char $\ast$$\ast$produtos, int size, int start, int end)
+\begin{DoxyCompactList}\small\item\em Faz print do total de elementos no array, e das opções para navegar na lista. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a470d394b53deef8590b0e8e61fbd7255}\label{view_8h_a470d394b53deef8590b0e8e61fbd7255}} 
+void \mbox{\hyperlink{view_8h_a470d394b53deef8590b0e8e61fbd7255}{print\+Q3A}} ()
+\begin{DoxyCompactList}\small\item\em Pede para inserir um mês. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_abf9811b3880085f43cb5722dc41c5cbb}\label{view_8h_abf9811b3880085f43cb5722dc41c5cbb}} 
+void \mbox{\hyperlink{view_8h_abf9811b3880085f43cb5722dc41c5cbb}{print\+Q3B}} ()
+\begin{DoxyCompactList}\small\item\em Pede para inserir um código de produto . \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a2076745e7b2d520ea31ca9f7ded479df}\label{view_8h_a2076745e7b2d520ea31ca9f7ded479df}} 
+void \mbox{\hyperlink{view_8h_a2076745e7b2d520ea31ca9f7ded479df}{print\+Q3C}} ()
+\begin{DoxyCompactList}\small\item\em Pergunta se quer resultado global ou por filial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a1e0e841bf04d9e83ae0748accfec64e5}{print\+R3}} (double vals\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Imprime a informação sobre o produto numa filial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_aa1bf2ea777292a5ab4f6066c9b7130bd}{print\+R4}} (double fils\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Imprime a informação sobre o produto de forma global. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_ad040393bf46f41bcfee4a5eed1ff2c33}\label{view_8h_ad040393bf46f41bcfee4a5eed1ff2c33}} 
+void \mbox{\hyperlink{view_8h_ad040393bf46f41bcfee4a5eed1ff2c33}{print\+Q4}} ()
+\begin{DoxyCompactList}\small\item\em Pergunta qual a filial a analisar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_ad6ccca78dc4222fc2a60535034377d3d}{print\+Q6}} (int sp, int sc)
+\begin{DoxyCompactList}\small\item\em Imprime o total de clientes e de produtos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a74daed9ec1ef2c74ea33aba2fa989467}\label{view_8h_a74daed9ec1ef2c74ea33aba2fa989467}} 
+void \mbox{\hyperlink{view_8h_a74daed9ec1ef2c74ea33aba2fa989467}{print\+Q7}} ()
+\begin{DoxyCompactList}\small\item\em Pede para inserir um codigo de cliente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a14799e7156ef3e9877400d94fa954586}{print\+Q7R}} (int $\ast$f)
+\begin{DoxyCompactList}\small\item\em Imprime a informação sobre as compras efetuadas pelo cliente. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a407b94541d57e87fbdd9c8c826ea49a6}\label{view_8h_a407b94541d57e87fbdd9c8c826ea49a6}} 
+void \mbox{\hyperlink{view_8h_a407b94541d57e87fbdd9c8c826ea49a6}{print\+Q7F}} ()
+\begin{DoxyCompactList}\small\item\em Print para voltar ao menu inicial. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_ab4bfd541aa259b1809a3c990fee59c8f}\label{view_8h_ab4bfd541aa259b1809a3c990fee59c8f}} 
+void \mbox{\hyperlink{view_8h_ab4bfd541aa259b1809a3c990fee59c8f}{print\+Q8A}} ()
+\begin{DoxyCompactList}\small\item\em Pede para inserir o mês de inicio do intervalo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a52452d39fc2e514eb316119bae147b61}\label{view_8h_a52452d39fc2e514eb316119bae147b61}} 
+void \mbox{\hyperlink{view_8h_a52452d39fc2e514eb316119bae147b61}{print\+Q8B}} ()
+\begin{DoxyCompactList}\small\item\em Pede para inserir o mês de fim do intervalo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_af30a9fcdff52bdca7bf9c314106eb848}{print8R}} (int mesI, int mesF, int vendas, double total\+Fat)
+\begin{DoxyCompactList}\small\item\em Imprime a informação sobre as vendas e total faturado no intervalo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a5e42bf2c6e27a8e02006f3afb08fb9fe}\label{view_8h_a5e42bf2c6e27a8e02006f3afb08fb9fe}} 
+void \mbox{\hyperlink{view_8h_a5e42bf2c6e27a8e02006f3afb08fb9fe}{print\+Q9C}} ()
+\begin{DoxyCompactList}\small\item\em Pede para inserir um codigo de produto. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a21656e44e1f3247ad3ff7c26de3eaee6}\label{view_8h_a21656e44e1f3247ad3ff7c26de3eaee6}} 
+void \mbox{\hyperlink{view_8h_a21656e44e1f3247ad3ff7c26de3eaee6}{print\+Q9F}} ()
+\begin{DoxyCompactList}\small\item\em Pede para inserir a filial a analisar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a20fce4cf38dc7e090b6e48cced2d8cb9}{print\+Q9R}} (int tN, int tP, char $\ast$$\ast$cN, char $\ast$$\ast$cP)
+\begin{DoxyCompactList}\small\item\em Imprime o total de vendas de um dado produto, bem como os clientes que a efetuaram, diferenciado N de P. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a5a5ec93320a9efd9f8fb9282296c3020}\label{view_8h_a5a5ec93320a9efd9f8fb9282296c3020}} 
+void \mbox{\hyperlink{view_8h_a5a5ec93320a9efd9f8fb9282296c3020}{print\+Q10A}} ()
+\begin{DoxyCompactList}\small\item\em Pede para inserir um codigo de cliente. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a494ed8c3116bc8162b8b7f313e9cbf1b}\label{view_8h_a494ed8c3116bc8162b8b7f313e9cbf1b}} 
+void \mbox{\hyperlink{view_8h_a494ed8c3116bc8162b8b7f313e9cbf1b}{print\+Q10B}} ()
+\begin{DoxyCompactList}\small\item\em Pede para inserir um mês. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a6ef8657514b6f380ea08bf9ba28f7a67}{print\+Q10C}} (char $\ast$$\ast$produtos, int $\ast$quants, int size, int start, int end)
+\begin{DoxyCompactList}\small\item\em Faz print do total de elementos no array, e das opções para navegar na lista. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a3ad5999b3af1b1028991acb9b6cfcd32}\label{view_8h_a3ad5999b3af1b1028991acb9b6cfcd32}} 
+void \mbox{\hyperlink{view_8h_a3ad5999b3af1b1028991acb9b6cfcd32}{print\+Q11}} ()
+\begin{DoxyCompactList}\small\item\em Pede para inserir quantos produtos dos mais vendidos quer ver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a0a1e4471c9a7bd1436d4a638271558c4}{print11R}} (int tam)
+\begin{DoxyCompactList}\small\item\em Print inicial dos produtos mais vendidos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a526d0c00433784b3272beb56efbd0a70}{print11\+RB}} (char $\ast$$\ast$produtos, int $\ast$$\ast$array\+Fil1, int $\ast$$\ast$array\+Fil2, int $\ast$$\ast$array\+Fil3, int size, int start, int end)
+\begin{DoxyCompactList}\small\item\em Imprime os produtos mais vendidos, bem como o total de clientes que o compraram e as unidades vendidas, filial a filial. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_ac027a2daa61d8e7c2ec2077ab68e54a9}\label{view_8h_ac027a2daa61d8e7c2ec2077ab68e54a9}} 
+void \mbox{\hyperlink{view_8h_ac027a2daa61d8e7c2ec2077ab68e54a9}{print\+Q12A}} ()
+\begin{DoxyCompactList}\small\item\em Pede para inserir quantos produtos dos mais vendidos de um cliente quer ver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a420817a9523e8f6d3f8ec4ee93e20114}{print\+Q12}} (char $\ast$$\ast$produtos, float $\ast$fats, int size, int start, int end)
+\begin{DoxyCompactList}\small\item\em Faz print do total de elementos no array, e das opções para navegar na lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_af95417867059b05fef39a28ca5036f93}{print\+Q13}} (int tp, int tc, int tv, int vp, int vc, int vv, char $\ast$p1, char $\ast$p2, char $\ast$p3)
+\begin{DoxyCompactList}\small\item\em Faz print das estatisticas totais dos ficheiros lidos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{view_8h_a8fb684fe9b1fa1c30582a94044c493da}\label{view_8h_a8fb684fe9b1fa1c30582a94044c493da}} 
+void \mbox{\hyperlink{view_8h_a8fb684fe9b1fa1c30582a94044c493da}{print\+Aviso}} ()
+\begin{DoxyCompactList}\small\item\em Informa que o S\+GV não está inicializado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funções relacionadas com o output para o Utilizador. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{view_8h_a9097afe2cdaa65912f445c0eebc094d3}\label{view_8h_a9097afe2cdaa65912f445c0eebc094d3}} 
+\index{view.h@{view.h}!getBashHeight@{getBashHeight}}
+\index{getBashHeight@{getBashHeight}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{getBashHeight()}{getBashHeight()}}
+{\footnotesize\ttfamily int get\+Bash\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtem a altura do Terminal. 
+
+\begin{DoxyReturn}{Returns}
+altura do Terminal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{view_8h_a98a3266304bfa18bcc6b9351ac13689a}\label{view_8h_a98a3266304bfa18bcc6b9351ac13689a}} 
+\index{view.h@{view.h}!getBashWidth@{getBashWidth}}
+\index{getBashWidth@{getBashWidth}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{getBashWidth()}{getBashWidth()}}
+{\footnotesize\ttfamily int get\+Bash\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtem a largura do Terminal. 
+
+\begin{DoxyReturn}{Returns}
+largura do Terminal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{view_8h_a0a1e4471c9a7bd1436d4a638271558c4}\label{view_8h_a0a1e4471c9a7bd1436d4a638271558c4}} 
+\index{view.h@{view.h}!print11R@{print11R}}
+\index{print11R@{print11R}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{print11R()}{print11R()}}
+{\footnotesize\ttfamily void print11R (\begin{DoxyParamCaption}\item[{int}]{tam }\end{DoxyParamCaption})}
+
+
+
+Print inicial dos produtos mais vendidos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tam} & Número de produtos a imprimir. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{view_8h_a526d0c00433784b3272beb56efbd0a70}\label{view_8h_a526d0c00433784b3272beb56efbd0a70}} 
+\index{view.h@{view.h}!print11RB@{print11RB}}
+\index{print11RB@{print11RB}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{print11RB()}{print11RB()}}
+{\footnotesize\ttfamily void print11\+RB (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{produtos,  }\item[{int $\ast$$\ast$}]{array\+Fil1,  }\item[{int $\ast$$\ast$}]{array\+Fil2,  }\item[{int $\ast$$\ast$}]{array\+Fil3,  }\item[{int}]{size,  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+
+
+Imprime os produtos mais vendidos, bem como o total de clientes que o compraram e as unidades vendidas, filial a filial. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em produtos} & Lista dos produtos mais vendidos. \\
+\hline
+\mbox{\texttt{ in}}  & {\em array\+Fil1} & Array com a informação referente ao produto na filial 1. \\
+\hline
+\mbox{\texttt{ in}}  & {\em array\+Fil2} & Array com a informação referente ao produto na filial 2. \\
+\hline
+\mbox{\texttt{ in}}  & {\em array\+Fil3} & Array com a informação referente ao produto na filial 3. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Tamanho total da lista. \\
+\hline
+\mbox{\texttt{ in}}  & {\em start} & Posição onde começa a impressão do array visível. \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & Posição onde acaba a impressão do array visível. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{view_8h_af30a9fcdff52bdca7bf9c314106eb848}\label{view_8h_af30a9fcdff52bdca7bf9c314106eb848}} 
+\index{view.h@{view.h}!print8R@{print8R}}
+\index{print8R@{print8R}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{print8R()}{print8R()}}
+{\footnotesize\ttfamily void print8R (\begin{DoxyParamCaption}\item[{int}]{mesI,  }\item[{int}]{mesF,  }\item[{int}]{vendas,  }\item[{double}]{total\+Fat }\end{DoxyParamCaption})}
+
+
+
+Imprime a informação sobre as vendas e total faturado no intervalo. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mesI} & Mês de inicio do intervalo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mesF} & Mês de fim do intervalo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em vendas} & Total de vendas do intervalo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em total\+Fat} & Total faturado no intervalo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{view_8h_a6ef8657514b6f380ea08bf9ba28f7a67}\label{view_8h_a6ef8657514b6f380ea08bf9ba28f7a67}} 
+\index{view.h@{view.h}!printQ10C@{printQ10C}}
+\index{printQ10C@{printQ10C}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{printQ10C()}{printQ10C()}}
+{\footnotesize\ttfamily void print\+Q10C (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{produtos,  }\item[{int $\ast$}]{quants,  }\item[{int}]{size,  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+
+
+Faz print do total de elementos no array, e das opções para navegar na lista. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em produtos} & Lista com os codigos a imprimir. \\
+\hline
+\mbox{\texttt{ in}}  & {\em quants} & Quantidades dos produtos comprados. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Tamanho total da lista. \\
+\hline
+\mbox{\texttt{ in}}  & {\em start} & Posição onde começa a impressão do array visível. \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & Posição onde acaba a impressão do array visível. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{view_8h_a420817a9523e8f6d3f8ec4ee93e20114}\label{view_8h_a420817a9523e8f6d3f8ec4ee93e20114}} 
+\index{view.h@{view.h}!printQ12@{printQ12}}
+\index{printQ12@{printQ12}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{printQ12()}{printQ12()}}
+{\footnotesize\ttfamily void print\+Q12 (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{produtos,  }\item[{float $\ast$}]{fats,  }\item[{int}]{size,  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+
+
+Faz print do total de elementos no array, e das opções para navegar na lista. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em produtos} & Lista dos produtos em que o cliente gastou mais. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fats} & Valor gasto no respetivo produto. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Tamanho total da lista. \\
+\hline
+\mbox{\texttt{ in}}  & {\em start} & Posição onde começa a impressão do array visível. \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & Posição onde acaba a impressão do array visível. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{view_8h_af95417867059b05fef39a28ca5036f93}\label{view_8h_af95417867059b05fef39a28ca5036f93}} 
+\index{view.h@{view.h}!printQ13@{printQ13}}
+\index{printQ13@{printQ13}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{printQ13()}{printQ13()}}
+{\footnotesize\ttfamily void print\+Q13 (\begin{DoxyParamCaption}\item[{int}]{tp,  }\item[{int}]{tc,  }\item[{int}]{tv,  }\item[{int}]{vp,  }\item[{int}]{vc,  }\item[{int}]{vv,  }\item[{char $\ast$}]{p1,  }\item[{char $\ast$}]{p2,  }\item[{char $\ast$}]{p3 }\end{DoxyParamCaption})}
+
+
+
+Faz print das estatisticas totais dos ficheiros lidos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tp} & Total de produtos. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tc} & Total de clientes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tv} & Total de vendas. \\
+\hline
+\mbox{\texttt{ in}}  & {\em vc} & Total de clientes válidos. \\
+\hline
+\mbox{\texttt{ in}}  & {\em vv} & Total de vendas válidas \\
+\hline
+\mbox{\texttt{ in}}  & {\em p1} & Nome do ficheiro de produtos lido. \\
+\hline
+\mbox{\texttt{ in}}  & {\em p2} & Nome do ficheiro de clientes lido. \\
+\hline
+\mbox{\texttt{ in}}  & {\em p3} & Nome do ficheiro de vendas lido. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{view_8h_acecdf88fc6ea1d8ee7b93472282c780b}\label{view_8h_acecdf88fc6ea1d8ee7b93472282c780b}} 
+\index{view.h@{view.h}!printQ2B@{printQ2B}}
+\index{printQ2B@{printQ2B}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{printQ2B()}{printQ2B()}}
+{\footnotesize\ttfamily void print\+Q2B (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{produtos,  }\item[{int}]{size,  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+
+
+Faz print do total de elementos no array, e das opções para navegar na lista. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em produtos} & Lista com os codigos a imprimir. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Tamanho total da lista. \\
+\hline
+\mbox{\texttt{ in}}  & {\em start} & Posição onde começa a impressão do array visível. \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & Posição onde acaba a impressão do array visível. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{view_8h_ad6ccca78dc4222fc2a60535034377d3d}\label{view_8h_ad6ccca78dc4222fc2a60535034377d3d}} 
+\index{view.h@{view.h}!printQ6@{printQ6}}
+\index{printQ6@{printQ6}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{printQ6()}{printQ6()}}
+{\footnotesize\ttfamily void print\+Q6 (\begin{DoxyParamCaption}\item[{int}]{sp,  }\item[{int}]{sc }\end{DoxyParamCaption})}
+
+
+
+Imprime o total de clientes e de produtos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sp} & Número total de produtos. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sc} & Número total de clientes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{view_8h_a14799e7156ef3e9877400d94fa954586}\label{view_8h_a14799e7156ef3e9877400d94fa954586}} 
+\index{view.h@{view.h}!printQ7R@{printQ7R}}
+\index{printQ7R@{printQ7R}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{printQ7R()}{printQ7R()}}
+{\footnotesize\ttfamily void print\+Q7R (\begin{DoxyParamCaption}\item[{int $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Imprime a informação sobre as compras efetuadas pelo cliente. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & Array de inteiros com os dados organizados por mês e filial. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{view_8h_a20fce4cf38dc7e090b6e48cced2d8cb9}\label{view_8h_a20fce4cf38dc7e090b6e48cced2d8cb9}} 
+\index{view.h@{view.h}!printQ9R@{printQ9R}}
+\index{printQ9R@{printQ9R}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{printQ9R()}{printQ9R()}}
+{\footnotesize\ttfamily void print\+Q9R (\begin{DoxyParamCaption}\item[{int}]{tN,  }\item[{int}]{tP,  }\item[{char $\ast$$\ast$}]{cN,  }\item[{char $\ast$$\ast$}]{cP }\end{DoxyParamCaption})}
+
+
+
+Imprime o total de vendas de um dado produto, bem como os clientes que a efetuaram, diferenciado N de P. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tN} & Número total de vendas N. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tP} & Número total de vendas P. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cN} & Lista dos clientes que compraram o produto em N. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cP} & Lista dos clientes que compraram o produto em P. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{view_8h_a1e0e841bf04d9e83ae0748accfec64e5}\label{view_8h_a1e0e841bf04d9e83ae0748accfec64e5}} 
+\index{view.h@{view.h}!printR3@{printR3}}
+\index{printR3@{printR3}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{printR3()}{printR3()}}
+{\footnotesize\ttfamily void print\+R3 (\begin{DoxyParamCaption}\item[{double}]{vals\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Imprime a informação sobre o produto numa filial. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em vals} & Array de inteiros com os totais de vendas e o total faturado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{view_8h_aa1bf2ea777292a5ab4f6066c9b7130bd}\label{view_8h_aa1bf2ea777292a5ab4f6066c9b7130bd}} 
+\index{view.h@{view.h}!printR4@{printR4}}
+\index{printR4@{printR4}!view.h@{view.h}}
+\subsubsection{\texorpdfstring{printR4()}{printR4()}}
+{\footnotesize\ttfamily void print\+R4 (\begin{DoxyParamCaption}\item[{double}]{fils\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Imprime a informação sobre o produto de forma global. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fils} & Array de inteiros com os totais de vendas e total faturado em cada filial. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,477 @@
+\hypertarget{filial_8h}{}\section{/\+Users/tarly127/\+Documents/\+Git\+Hub/grupo54/grupo54/proj\+C/include/model/filial.h File Reference}
+\label{filial_8h}\index{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/model/filial.h@{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/model/filial.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}bool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}listas.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{filial_8h_a369266c24eacffb87046522897a570d5}\label{filial_8h_a369266c24eacffb87046522897a570d5}} 
+\#define {\bfseries \+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE}
+\item 
+\mbox{\Hypertarget{filial_8h_a848bb0e0fe1522d44344445c43d05bec}\label{filial_8h_a848bb0e0fe1522d44344445c43d05bec}} 
+\#define {\bfseries M\+A\+X\+B\+U\+F\+S\+I\+ZE}~128
+\item 
+\mbox{\Hypertarget{filial_8h_a437ef08681e7210d6678427030446a54}\label{filial_8h_a437ef08681e7210d6678427030446a54}} 
+\#define {\bfseries L\+E\+FT}~-\/1
+\item 
+\mbox{\Hypertarget{filial_8h_a521e6229e11c089d488ef795efcbcbda}\label{filial_8h_a521e6229e11c089d488ef795efcbcbda}} 
+\#define {\bfseries B\+AL}~0
+\item 
+\mbox{\Hypertarget{filial_8h_a80fb826a684cf3f0d306b22aa100ddac}\label{filial_8h_a80fb826a684cf3f0d306b22aa100ddac}} 
+\#define {\bfseries R\+I\+G\+HT}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{filial_8h_a6b1e32e600c2b8b35813f011b1a31db0}\label{filial_8h_a6b1e32e600c2b8b35813f011b1a31db0}} 
+typedef struct info $\ast$ \mbox{\hyperlink{filial_8h_a6b1e32e600c2b8b35813f011b1a31db0}{Fil}}
+\begin{DoxyCompactList}\small\item\em Esta estrutura contém referentes às vendas efetuadas pelo Cliente. Esses valores são o código do produto, a quantidade, o preço, o mês da venda e o seu tipo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}\label{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}} 
+typedef struct avl\+Filial $\ast$ \mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}}
+\begin{DoxyCompactList}\small\item\em Esta estrutura representa uma A\+VL, ordenada pelo código do cliente. Para além disto, cada nodo contem uma lista de informações referentes ao cliente e o seu tamanho, bem como os apontadores para os outros ramos, e uma variavel bal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{filial_8h_a503e903541a12cf117cfc92c0d880b37}\label{filial_8h_a503e903541a12cf117cfc92c0d880b37}} 
+typedef struct filiais $\ast$ \mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}}
+\begin{DoxyCompactList}\small\item\em Esta estrutura representa uma Hash Table de structs avl\+Filial. Esta estrutura é inicializada com 78 posições na Hash Table, representando as 26 letras do alfabeto e as 3 filiais. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{filial_8h_a6b1e32e600c2b8b35813f011b1a31db0}{Fil}} $\ast$ \mbox{\hyperlink{filial_8h_a0ae2dd1b91ae124baa748659915b4c9b}{init\+Fil}} (char $\ast$campos\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Iniciliza o primeiro elemento de uma lista de structs info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{filial_8h_a6b1e32e600c2b8b35813f011b1a31db0}{Fil}} $\ast$ \mbox{\hyperlink{filial_8h_a25968f841f36f665d7b3e12e98a75cb1}{add\+Info}} (\mbox{\hyperlink{filial_8h_a6b1e32e600c2b8b35813f011b1a31db0}{Fil}} $\ast$f, char $\ast$campos\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Adiciona uma informação à struct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}} \mbox{\hyperlink{filial_8h_a42506b655221026e3362e8e6a0af754d}{insert\+Fil}} (\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}} $\ast$f, char $\ast$campos\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Insere um novo nodo na árvore. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} \mbox{\hyperlink{filial_8h_ad4a9d0b430d714080cf95e149659e4a4}{insert\+Fil\+Hash}} (\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} f, char $\ast$campos\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Chama a insert\+Fil para a A\+VL correta. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} \mbox{\hyperlink{filial_8h_ac22a29c77fa79af6b0c9382aeab9f463}{init\+Fil\+Hash}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa a estrutura principal das filiais. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{filial_8h_aebfcb8ad8735f9f4aba2d42eaa10edd5}{pertence\+Fil}} (\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}} a, char $\ast$cod)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 5. Esta percorre uma A\+VL, procurando codigos iguais ao recebido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{filial_8h_aab240dd01337a84f6bc8aef4519bf03f}{query5\+Aux}} (\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} fil, char $\ast$cod)
+\begin{DoxyCompactList}\small\item\em Chama a função pertence\+Fil para um codigo nas três filiais. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{filial_8h_a04d1ec456a19980aa758e1c44ff44557}{query5\+Fil}} (\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} fil, char $\ast$$\ast$ar, int c, \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} res)
+\begin{DoxyCompactList}\small\item\em Função que chama a pertence\+Fil, percorrendo um array com todos os clientes que efetuaram compras. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{filial_8h_a8daddde2461aaf0564e12119bb178461}{fil\+Fil}} (int $\ast$a, \mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}} fil, char $\ast$c, int nf)
+\begin{DoxyCompactList}\small\item\em Função que percorre uma arvore, adicionando ao array a quantidade comprada em cada mês por um Cliente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{filial_8h_ace203bf1799af8777cb371cbff094a81}{query7\+Fil}} (int $\ast$f, \mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} fil, char $\ast$cod)
+\begin{DoxyCompactList}\small\item\em Função que chama a fil\+Fil para todas as árvores do codigo recebido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{filial_8h_afd63663d6e19495a762cae487b01d137}{query9\+Aux}} (\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}} avl, char $\ast$codP, \mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} N)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que percorre uma A\+VL, adicionando o codigo do cliente à estrutura caso este tenha comprado o produto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{filial_8h_a95c8d89cfd8ed391135806b3d816c48d}{query9F}} (int f, char $\ast$codP, \mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} fil, \mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}} N)
+\begin{DoxyCompactList}\small\item\em Função que chama a query7\+Fil, percorrendo todas as A\+V\+Ls correspondentes á filial inserida. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} \mbox{\hyperlink{filial_8h_ab394dd2d692a7cf0906a13c7716df777}{query10\+Fil\+Aux}} (\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} ar, \mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}} avl, int mes, char $\ast$cliente)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 10. Esta percorre uma A\+VL, adicionando todos os produtos de um cliente ao Array, caso estes tenham sido comprados no mês dado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} \mbox{\hyperlink{filial_8h_a9b35f07126114b31b908bf0481d47467}{query10\+Fil}} (\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} ar, \mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} f, int mes, char $\ast$cliente)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 10. Esta percorre um Fil\+Hash, para obter a informação necessária. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} \mbox{\hyperlink{filial_8h_a73c528c991ffe19c0661b1489dd9d213}{query11\+Fil\+Aux}} (\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}} avl, \mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} ar, int tamanho, int fil)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 11. Esta percorre uma A\+VL, para obter a informação necessária. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} \mbox{\hyperlink{filial_8h_a07f9ab7ddeb5f0881b034aacd229b7d0}{query11\+Fil}} (\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} f, \mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} ar, int tamanho)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 11. Esta percorre um Fil\+Hash, para obter a informação necessária. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} \mbox{\hyperlink{filial_8h_a242283e3b78ed4192aaf936231cf7715}{query12\+Fil\+Aux}} (\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} ar, \mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}} avl, char $\ast$cliente)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 12. Esta percorre uma A\+VL, adicionando todos os produtos de um cliente ao Array, juntamente com o dinheiro gasto neles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} \mbox{\hyperlink{filial_8h_ac832d07acbe8acd7ab63129e37072bbc}{query12\+Fil}} (\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} ar, \mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} f, char $\ast$cliente)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 12. Esta percorre um Fil\+Hash, para obter a informação necessária. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{filial_8h_a286eb35035371a7c8b5601e215972203}{free\+Info}} (\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}} fil, int t)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço das infos de um nodo da A\+V\+L\+Fil. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{filial_8h_adfc7bf0479c061078e87921dbc963bcf}{free\+A\+V\+L\+Fil}} (\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}} avlF)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço de uma A\+V\+L\+Fil. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{filial_8h_a600365b6f10346cdc58687419ceb5490}{free\+Fil\+Hash}} (\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} f)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço da Fil\+Hash. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funções relacionadas com as informações das filiais. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{filial_8h_a25968f841f36f665d7b3e12e98a75cb1}\label{filial_8h_a25968f841f36f665d7b3e12e98a75cb1}} 
+\index{filial.h@{filial.h}!addInfo@{addInfo}}
+\index{addInfo@{addInfo}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{addInfo()}{addInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{filial_8h_a6b1e32e600c2b8b35813f011b1a31db0}{Fil}}$\ast$ add\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filial_8h_a6b1e32e600c2b8b35813f011b1a31db0}{Fil}} $\ast$}]{f,  }\item[{char $\ast$}]{campos\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Adiciona uma informação à struct. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em campos} & Lista de strings contendo a informação de uma linha do ficheiro das vendas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Fil$\ast$ apontador para uma lista de structs info. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{filial_8h_a8daddde2461aaf0564e12119bb178461}\label{filial_8h_a8daddde2461aaf0564e12119bb178461}} 
+\index{filial.h@{filial.h}!filFil@{filFil}}
+\index{filFil@{filFil}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{filFil()}{filFil()}}
+{\footnotesize\ttfamily int$\ast$ fil\+Fil (\begin{DoxyParamCaption}\item[{int $\ast$}]{a,  }\item[{\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}}}]{fil,  }\item[{char $\ast$}]{c,  }\item[{int}]{nf }\end{DoxyParamCaption})}
+
+
+
+Função que percorre uma arvore, adicionando ao array a quantidade comprada em cada mês por um Cliente. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em a} & Array de inteiros onde guardamos a informação das compras. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fil} & A\+V\+L\+Fil que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & codigo do Cliente a procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nf} & Número da filial onde está a procurar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_adfc7bf0479c061078e87921dbc963bcf}\label{filial_8h_adfc7bf0479c061078e87921dbc963bcf}} 
+\index{filial.h@{filial.h}!freeAVLFil@{freeAVLFil}}
+\index{freeAVLFil@{freeAVLFil}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{freeAVLFil()}{freeAVLFil()}}
+{\footnotesize\ttfamily void free\+A\+V\+L\+Fil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}}}]{avlF }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço de uma A\+V\+L\+Fil. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em avlF} & Árvore que queremos dar free. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_a600365b6f10346cdc58687419ceb5490}\label{filial_8h_a600365b6f10346cdc58687419ceb5490}} 
+\index{filial.h@{filial.h}!freeFilHash@{freeFilHash}}
+\index{freeFilHash@{freeFilHash}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{freeFilHash()}{freeFilHash()}}
+{\footnotesize\ttfamily void free\+Fil\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço da Fil\+Hash. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & Fil\+Hash que queremos dar free. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_a286eb35035371a7c8b5601e215972203}\label{filial_8h_a286eb35035371a7c8b5601e215972203}} 
+\index{filial.h@{filial.h}!freeInfo@{freeInfo}}
+\index{freeInfo@{freeInfo}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{freeInfo()}{freeInfo()}}
+{\footnotesize\ttfamily void free\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}}}]{fil,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço das infos de um nodo da A\+V\+L\+Fil. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fil} & A\+VL com as infos que queremos dar free. \\
+\hline
+\mbox{\texttt{ in}}  & {\em t} & Número de infos presentes no nodo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_a0ae2dd1b91ae124baa748659915b4c9b}\label{filial_8h_a0ae2dd1b91ae124baa748659915b4c9b}} 
+\index{filial.h@{filial.h}!initFil@{initFil}}
+\index{initFil@{initFil}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{initFil()}{initFil()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{filial_8h_a6b1e32e600c2b8b35813f011b1a31db0}{Fil}}$\ast$ init\+Fil (\begin{DoxyParamCaption}\item[{char $\ast$}]{campos\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Iniciliza o primeiro elemento de uma lista de structs info. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em campos} & Lista de strings contendo a informação de uma linha do ficheiro das vendas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Fil$\ast$ apontador para uma lista de structs info. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{filial_8h_ac22a29c77fa79af6b0c9382aeab9f463}\label{filial_8h_ac22a29c77fa79af6b0c9382aeab9f463}} 
+\index{filial.h@{filial.h}!initFilHash@{initFilHash}}
+\index{initFilHash@{initFilHash}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{initFilHash()}{initFilHash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} init\+Fil\+Hash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa a estrutura principal das filiais. 
+
+\begin{DoxyReturn}{Returns}
+f Estrutura inicializada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{filial_8h_a42506b655221026e3362e8e6a0af754d}\label{filial_8h_a42506b655221026e3362e8e6a0af754d}} 
+\index{filial.h@{filial.h}!insertFil@{insertFil}}
+\index{insertFil@{insertFil}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{insertFil()}{insertFil()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}} insert\+Fil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}} $\ast$}]{f,  }\item[{char $\ast$}]{campos\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Insere um novo nodo na árvore. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em f} & A\+VL com a informação. \\
+\hline
+\mbox{\texttt{ in}}  & {\em campos} & Lista de strings contendo a informação de uma linha do ficheiro das vendas. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_ad4a9d0b430d714080cf95e149659e4a4}\label{filial_8h_ad4a9d0b430d714080cf95e149659e4a4}} 
+\index{filial.h@{filial.h}!insertFilHash@{insertFilHash}}
+\index{insertFilHash@{insertFilHash}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{insertFilHash()}{insertFilHash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}} insert\+Fil\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}}}]{f,  }\item[{char $\ast$}]{campos\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Chama a insert\+Fil para a A\+VL correta. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em campos} & Lista de strings contendo a informação de uma linha do ficheiro das vendas. \\
+\hline
+\mbox{\texttt{ out}}  & {\em f} & Estrutura onde está guardada toda a informação das filiais. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_aebfcb8ad8735f9f4aba2d42eaa10edd5}\label{filial_8h_aebfcb8ad8735f9f4aba2d42eaa10edd5}} 
+\index{filial.h@{filial.h}!pertenceFil@{pertenceFil}}
+\index{pertenceFil@{pertenceFil}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{pertenceFil()}{pertenceFil()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} pertence\+Fil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}}}]{a,  }\item[{char $\ast$}]{cod }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 5. Esta percorre uma A\+VL, procurando codigos iguais ao recebido. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em avl} & A A\+VL que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & Codigo do cliente que vamos procurar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Indica se o codigo se encontra na A\+VL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{filial_8h_a9b35f07126114b31b908bf0481d47467}\label{filial_8h_a9b35f07126114b31b908bf0481d47467}} 
+\index{filial.h@{filial.h}!query10Fil@{query10Fil}}
+\index{query10Fil@{query10Fil}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{query10Fil()}{query10Fil()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} query10\+Fil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{ar,  }\item[{\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}}}]{f,  }\item[{int}]{mes,  }\item[{char $\ast$}]{cliente }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 10. Esta percorre um Fil\+Hash, para obter a informação necessária. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ar} & Array2 onde vamos colocar a informação, e que vamos devolver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & A Fil\+Hash que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em m} & Mês em que vamos procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cliente} & Código de cliente a procurar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_ab394dd2d692a7cf0906a13c7716df777}\label{filial_8h_ab394dd2d692a7cf0906a13c7716df777}} 
+\index{filial.h@{filial.h}!query10FilAux@{query10FilAux}}
+\index{query10FilAux@{query10FilAux}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{query10FilAux()}{query10FilAux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}} query10\+Fil\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_addcc928167867fc733252043c874bc60}{Array2}}}]{ar,  }\item[{\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}}}]{avl,  }\item[{int}]{mes,  }\item[{char $\ast$}]{cliente }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 10. Esta percorre uma A\+VL, adicionando todos os produtos de um cliente ao Array, caso estes tenham sido comprados no mês dado. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ar} & Array2 onde vamos colocar a informação, e que vamos devolver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em avl} & A A\+VL que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em m} & Mês em que vamos procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cliente} & Código de cliente a procurar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_a07f9ab7ddeb5f0881b034aacd229b7d0}\label{filial_8h_a07f9ab7ddeb5f0881b034aacd229b7d0}} 
+\index{filial.h@{filial.h}!query11Fil@{query11Fil}}
+\index{query11Fil@{query11Fil}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{query11Fil()}{query11Fil()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} query11\+Fil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}}}]{f,  }\item[{\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}}}]{ar,  }\item[{int}]{tamanho }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 11. Esta percorre um Fil\+Hash, para obter a informação necessária. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ar} & Array4 onde vamos colocar a informação, e que vamos devolver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & Fil\+Hash que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tamanho} & Tamanho pretendido para o Array4. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_a73c528c991ffe19c0661b1489dd9d213}\label{filial_8h_a73c528c991ffe19c0661b1489dd9d213}} 
+\index{filial.h@{filial.h}!query11FilAux@{query11FilAux}}
+\index{query11FilAux@{query11FilAux}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{query11FilAux()}{query11FilAux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}} query11\+Fil\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}}}]{avl,  }\item[{\mbox{\hyperlink{listas_8h_ab9826f98652dd28625cbd5b6b03b12c4}{Array4}}}]{ar,  }\item[{int}]{tamanho,  }\item[{int}]{fil }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 11. Esta percorre uma A\+VL, para obter a informação necessária. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em avl} & A A\+VL que vamos percorrer. \\
+\hline
+\mbox{\texttt{ out}}  & {\em ar} & Array4 onde vamos colocar a informação, e que vamos devolver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tamanho} & Tamanho pretendido para o Array4. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fil} & Número da filial em que está a procurar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_ac832d07acbe8acd7ab63129e37072bbc}\label{filial_8h_ac832d07acbe8acd7ab63129e37072bbc}} 
+\index{filial.h@{filial.h}!query12Fil@{query12Fil}}
+\index{query12Fil@{query12Fil}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{query12Fil()}{query12Fil()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} query12\+Fil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}}}]{ar,  }\item[{\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}}}]{f,  }\item[{char $\ast$}]{cliente }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 12. Esta percorre um Fil\+Hash, para obter a informação necessária. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ar} & Array3 onde vamos colocar a informação, e que vamos devolver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & A Fil\+Hash que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cliente} & Código de cliente a procurar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_a242283e3b78ed4192aaf936231cf7715}\label{filial_8h_a242283e3b78ed4192aaf936231cf7715}} 
+\index{filial.h@{filial.h}!query12FilAux@{query12FilAux}}
+\index{query12FilAux@{query12FilAux}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{query12FilAux()}{query12FilAux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}} query12\+Fil\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a8497eaa837e78a8dd70e44d195a6e012}{Array3}}}]{ar,  }\item[{\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}}}]{avl,  }\item[{char $\ast$}]{cliente }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 12. Esta percorre uma A\+VL, adicionando todos os produtos de um cliente ao Array, juntamente com o dinheiro gasto neles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ar} & Array3 onde vamos colocar a informação, e que vamos devolver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em avl} & A A\+VL que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cliente} & Código de cliente a procurar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_aab240dd01337a84f6bc8aef4519bf03f}\label{filial_8h_aab240dd01337a84f6bc8aef4519bf03f}} 
+\index{filial.h@{filial.h}!query5Aux@{query5Aux}}
+\index{query5Aux@{query5Aux}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{query5Aux()}{query5Aux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} query5\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}}}]{fil,  }\item[{char $\ast$}]{cod }\end{DoxyParamCaption})}
+
+
+
+Chama a função pertence\+Fil para um codigo nas três filiais. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fil} & Estrutura onde esta a informação das filiais. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & Codigo do cliente que vamos procurar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Indica se o codigo se encontra nas três filiais. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{filial_8h_a04d1ec456a19980aa758e1c44ff44557}\label{filial_8h_a04d1ec456a19980aa758e1c44ff44557}} 
+\index{filial.h@{filial.h}!query5Fil@{query5Fil}}
+\index{query5Fil@{query5Fil}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{query5Fil()}{query5Fil()}}
+{\footnotesize\ttfamily void query5\+Fil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}}}]{fil,  }\item[{char $\ast$$\ast$}]{ar,  }\item[{int}]{c,  }\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{res }\end{DoxyParamCaption})}
+
+
+
+Função que chama a pertence\+Fil, percorrendo um array com todos os clientes que efetuaram compras. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fil} & Estrutura onde esta a informação das filiais. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ar} & Array com os codigos dos clientes que efetuaram compras. \\
+\hline
+\mbox{\texttt{ in}}  & {\em res} & Estrutura onde iremos guardar os codigos dos clientes que compraram nas três filiais. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_ace203bf1799af8777cb371cbff094a81}\label{filial_8h_ace203bf1799af8777cb371cbff094a81}} 
+\index{filial.h@{filial.h}!query7Fil@{query7Fil}}
+\index{query7Fil@{query7Fil}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{query7Fil()}{query7Fil()}}
+{\footnotesize\ttfamily void query7\+Fil (\begin{DoxyParamCaption}\item[{int $\ast$}]{f,  }\item[{\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}}}]{fil,  }\item[{char $\ast$}]{cod }\end{DoxyParamCaption})}
+
+
+
+Função que chama a fil\+Fil para todas as árvores do codigo recebido. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & Array de inteiros onde vamos guardar a informação. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fil} & Estrutura onde esta a informação das filiais. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & Codigo do cliente que vamos procurar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_afd63663d6e19495a762cae487b01d137}\label{filial_8h_afd63663d6e19495a762cae487b01d137}} 
+\index{filial.h@{filial.h}!query9Aux@{query9Aux}}
+\index{query9Aux@{query9Aux}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{query9Aux()}{query9Aux()}}
+{\footnotesize\ttfamily void query9\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filial_8h_a5e44383736d1b45aa5a8e9bb7b376ea6}{A\+V\+L\+Fil}}}]{avl,  }\item[{char $\ast$}]{codP,  }\item[{\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}}}]{N }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que percorre uma A\+VL, adicionando o codigo do cliente à estrutura caso este tenha comprado o produto. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em avl} & Estrutura onde esta a informação da filial. \\
+\hline
+\mbox{\texttt{ in}}  & {\em codP} & Codigo do produto que vamos procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & Estrutura usada para guardar os codigos dos clientes, diferenciando coompras N de P. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filial_8h_a95c8d89cfd8ed391135806b3d816c48d}\label{filial_8h_a95c8d89cfd8ed391135806b3d816c48d}} 
+\index{filial.h@{filial.h}!query9F@{query9F}}
+\index{query9F@{query9F}!filial.h@{filial.h}}
+\subsubsection{\texorpdfstring{query9F()}{query9F()}}
+{\footnotesize\ttfamily void query9F (\begin{DoxyParamCaption}\item[{int}]{f,  }\item[{char $\ast$}]{codP,  }\item[{\mbox{\hyperlink{filial_8h_a503e903541a12cf117cfc92c0d880b37}{Fil\+Hash}}}]{fil,  }\item[{\mbox{\hyperlink{listas_8h_a2e223bdbfd48ed2e88ae679590cf3f7e}{Cods}}}]{N }\end{DoxyParamCaption})}
+
+
+
+Função que chama a query7\+Fil, percorrendo todas as A\+V\+Ls correspondentes á filial inserida. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & Número da filial onde se vai procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em codP} & Codigo do Produto a procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fil} & Estrutura com a informação de todas as filiais. \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & Estrutura usada para guardar os codigos dos clientes, diferenciando coompras N de P. \\
+\hline
+\end{DoxyParams}

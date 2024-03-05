@@ -1,0 +1,363 @@
+\hypertarget{produtos_8h}{}\section{/\+Users/tarly127/\+Documents/\+Git\+Hub/grupo54/grupo54/proj\+C/include/model/produtos.h File Reference}
+\label{produtos_8h}\index{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/model/produtos.h@{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/model/produtos.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../../include/model/bool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../include/model/listas.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{produtos_8h_a369266c24eacffb87046522897a570d5}\label{produtos_8h_a369266c24eacffb87046522897a570d5}} 
+\#define {\bfseries \+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE}
+\item 
+\mbox{\Hypertarget{produtos_8h_a848bb0e0fe1522d44344445c43d05bec}\label{produtos_8h_a848bb0e0fe1522d44344445c43d05bec}} 
+\#define {\bfseries M\+A\+X\+B\+U\+F\+S\+I\+ZE}~128
+\item 
+\mbox{\Hypertarget{produtos_8h_a437ef08681e7210d6678427030446a54}\label{produtos_8h_a437ef08681e7210d6678427030446a54}} 
+\#define {\bfseries L\+E\+FT}~-\/1
+\item 
+\mbox{\Hypertarget{produtos_8h_a521e6229e11c089d488ef795efcbcbda}\label{produtos_8h_a521e6229e11c089d488ef795efcbcbda}} 
+\#define {\bfseries B\+AL}~0
+\item 
+\mbox{\Hypertarget{produtos_8h_a80fb826a684cf3f0d306b22aa100ddac}\label{produtos_8h_a80fb826a684cf3f0d306b22aa100ddac}} 
+\#define {\bfseries R\+I\+G\+HT}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{produtos_8h_a6c9c92316f78c7f032680174133b17ec}\label{produtos_8h_a6c9c92316f78c7f032680174133b17ec}} 
+typedef struct avl\+Produtos $\ast$ \mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}}
+\begin{DoxyCompactList}\small\item\em Árvore Binária A\+VL onde são guardados os códigos de produtos, juntamente com um booleano que nos diz se o produto foi, ou não comprado. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{produtos_8h_a731411bd6ea315ca756b6113f2044643}\label{produtos_8h_a731411bd6ea315ca756b6113f2044643}} 
+typedef struct hash\+Produtos $\ast$ \mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}}
+\begin{DoxyCompactList}\small\item\em Estrutura semelhante a uma Hash Table onde guardamos os apontadores para as árvores dos produtos, sendo que guarda 26 árvores, 1 para cada letra do alfabeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{produtos_8h_aa6b417c4dbc32828bf5cbc9d780996ca}{valida\+Produto}} (char $\ast$prod)
+\begin{DoxyCompactList}\small\item\em Função de validação de um produto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{produtos_8h_af252768e1258b91185d7a25426b243e8}{hashP}} (char $\ast$prod)
+\begin{DoxyCompactList}\small\item\em Hash para o Catálogo de Produtos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{produtos_8h_af0bbcd203c16ff34175f21fefcfb4601}{existe\+Produto}} (char $\ast$prod, \mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}} cp)
+\begin{DoxyCompactList}\small\item\em Funçãode verificação da existência de um produto no catálogo de produtos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produtos_8h_ac3daca713b0600ff633d4d7ad27e92f1}{update\+Existe\+P\+Aux}} (\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}} ap, char $\ast$cod)
+\begin{DoxyCompactList}\small\item\em Função de auxílio à atualização do estado de um produto. Quando o código é encontrado numa struct avl\+Prods, o valor é atualizado para true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produtos_8h_ab8317f2e118ec906e7174075a8c2d2d0}{update\+ExisteP}} (\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}} c, char $\ast$cod)
+\begin{DoxyCompactList}\small\item\em Função de atualização do estado de um produto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} \mbox{\hyperlink{produtos_8h_ab56c7643f39d8384c18829bd20bc0e01}{query2\+Prod\+Aux}} (\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}} a, \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} ar)
+\begin{DoxyCompactList}\small\item\em Função auxiliar de procura para a query 2. Esta percorre todos os nodos da A\+VL, adicionando todos os produtos que encontra ao Array passado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} \mbox{\hyperlink{produtos_8h_a35d2e808395f662910d843f27af5bd49}{query2\+Prod}} (\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}} c, char a, \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} ar)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 2. Esta percorre todas as A\+V\+Ls do Catálogo de Produtos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} \mbox{\hyperlink{produtos_8h_a4767faae23fdc8903aa22b60e07b4cde}{query4\+Prod\+Aux}} (\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}} a, \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} ar)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 4. Esta percorre uma A\+VL, adicionando ao Array todos os produtos não vendidos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} \mbox{\hyperlink{produtos_8h_af3c47dc33aae5cabcf7a61701969a88e}{query4\+Prod}} (\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}} c, \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} ar)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 4. Esta percorre todas as A\+V\+Ls do Catálogo de Produtos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produtos_8h_a8c746a0d6b7d06cb9f4f6ebd1762b12a}{query6\+Prod\+Aux}} (\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}} a, int $\ast$s)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 6. Esta percorre uma A\+VL, contando o número de produtos não vendidos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{produtos_8h_a2eae5fb35e17b31aacdb1003be2b65ea}{query6\+Prod}} (\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}} c)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 6. Esta percorre todas as A\+V\+Ls do Catálogo de Produtos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}} \mbox{\hyperlink{produtos_8h_a2c62e3bef55b530df87145ceca396f1b}{insert\+A\+V\+L\+Produto}} (\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}} $\ast$prods, char $\ast$prod)
+\begin{DoxyCompactList}\small\item\em Função de inserção numa árvore de procura balanceada. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}} \mbox{\hyperlink{produtos_8h_affed3e04d6d7278ad6ccd95aae455540}{insert\+Cat\+Prods}} (\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}} cp, char $\ast$produto)
+\begin{DoxyCompactList}\small\item\em Função de inserção num Catálogo de Produtos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produtos_8h_a00208832a7556f31b3498bf28ae71263}{free\+A\+V\+L\+Produtos}} (\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}} avl\+Prods)
+\begin{DoxyCompactList}\small\item\em Função libertação de memória de uma A\+VL de produtos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produtos_8h_a4234e17fa1e9a2e234aa519e1c7480a9}{free\+Cat\+Prods}} (\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}} cp)
+\begin{DoxyCompactList}\small\item\em Função libertação de memória de um Catálogo de Produtos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}} \mbox{\hyperlink{produtos_8h_a89c27ba89de89bd882f0135e113f2f83}{init\+Cat\+Prods}} ()
+\begin{DoxyCompactList}\small\item\em Função de Inicialização de um Catálogo de produtos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funções relacionadas com as informações dos produtos. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{produtos_8h_af0bbcd203c16ff34175f21fefcfb4601}\label{produtos_8h_af0bbcd203c16ff34175f21fefcfb4601}} 
+\index{produtos.h@{produtos.h}!existeProduto@{existeProduto}}
+\index{existeProduto@{existeProduto}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{existeProduto()}{existeProduto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} existe\+Produto (\begin{DoxyParamCaption}\item[{char $\ast$}]{prod,  }\item[{\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}}}]{cp }\end{DoxyParamCaption})}
+
+
+
+Funçãode verificação da existência de um produto no catálogo de produtos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prod} & Um código de produto \\
+\hline
+\mbox{\texttt{ in}}  & {\em cp} & O catálogo de produtos onde vamos procurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Se o código existe ou não. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{produtos_8h_a00208832a7556f31b3498bf28ae71263}\label{produtos_8h_a00208832a7556f31b3498bf28ae71263}} 
+\index{produtos.h@{produtos.h}!freeAVLProdutos@{freeAVLProdutos}}
+\index{freeAVLProdutos@{freeAVLProdutos}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{freeAVLProdutos()}{freeAVLProdutos()}}
+{\footnotesize\ttfamily void free\+A\+V\+L\+Produtos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}}}]{avl\+Prods }\end{DoxyParamCaption})}
+
+
+
+Função libertação de memória de uma A\+VL de produtos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em avl\+Prods} & A árvore cuja memória vamos libertar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{produtos_8h_a4234e17fa1e9a2e234aa519e1c7480a9}\label{produtos_8h_a4234e17fa1e9a2e234aa519e1c7480a9}} 
+\index{produtos.h@{produtos.h}!freeCatProds@{freeCatProds}}
+\index{freeCatProds@{freeCatProds}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{freeCatProds()}{freeCatProds()}}
+{\footnotesize\ttfamily void free\+Cat\+Prods (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}}}]{cp }\end{DoxyParamCaption})}
+
+
+
+Função libertação de memória de um Catálogo de Produtos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cp} & O Catálogo cuja memória vamos libertar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{produtos_8h_af252768e1258b91185d7a25426b243e8}\label{produtos_8h_af252768e1258b91185d7a25426b243e8}} 
+\index{produtos.h@{produtos.h}!hashP@{hashP}}
+\index{hashP@{hashP}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{hashP()}{hashP()}}
+{\footnotesize\ttfamily int hashP (\begin{DoxyParamCaption}\item[{char $\ast$}]{prod }\end{DoxyParamCaption})}
+
+
+
+Hash para o Catálogo de Produtos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prod} & Um código de produto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int O hash desse produto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{produtos_8h_a89c27ba89de89bd882f0135e113f2f83}\label{produtos_8h_a89c27ba89de89bd882f0135e113f2f83}} 
+\index{produtos.h@{produtos.h}!initCatProds@{initCatProds}}
+\index{initCatProds@{initCatProds}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{initCatProds()}{initCatProds()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}} init\+Cat\+Prods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de Inicialização de um Catálogo de produtos. 
+
+\begin{DoxyReturn}{Returns}
+Um novo catálogo de produtos 
+\end{DoxyReturn}
+\mbox{\Hypertarget{produtos_8h_a2c62e3bef55b530df87145ceca396f1b}\label{produtos_8h_a2c62e3bef55b530df87145ceca396f1b}} 
+\index{produtos.h@{produtos.h}!insertAVLProduto@{insertAVLProduto}}
+\index{insertAVLProduto@{insertAVLProduto}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{insertAVLProduto()}{insertAVLProduto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}} insert\+A\+V\+L\+Produto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}} $\ast$}]{prods,  }\item[{char $\ast$}]{prod }\end{DoxyParamCaption})}
+
+
+
+Função de inserção numa árvore de procura balanceada. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prods} & A árvore onde vamos inserir um código \\
+\hline
+\mbox{\texttt{ in}}  & {\em prod} & O código que vamos inserir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A árvore nova com o novo código inserido e balanceada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{produtos_8h_affed3e04d6d7278ad6ccd95aae455540}\label{produtos_8h_affed3e04d6d7278ad6ccd95aae455540}} 
+\index{produtos.h@{produtos.h}!insertCatProds@{insertCatProds}}
+\index{insertCatProds@{insertCatProds}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{insertCatProds()}{insertCatProds()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}} insert\+Cat\+Prods (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}}}]{cp,  }\item[{char $\ast$}]{produto }\end{DoxyParamCaption})}
+
+
+
+Função de inserção num Catálogo de Produtos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cp} & O Catálogo onde vai ser feita a inserção. \\
+\hline
+\mbox{\texttt{ in}}  & {\em prod} & O código que vamos inserir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O Catálogo com o novo produto inserido. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{produtos_8h_a35d2e808395f662910d843f27af5bd49}\label{produtos_8h_a35d2e808395f662910d843f27af5bd49}} 
+\index{produtos.h@{produtos.h}!query2Prod@{query2Prod}}
+\index{query2Prod@{query2Prod}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{query2Prod()}{query2Prod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} query2\+Prod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}}}]{c,  }\item[{char}]{a,  }\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{ar }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 2. Esta percorre todas as A\+V\+Ls do Catálogo de Produtos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & O Catálogo que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ar} & O Array onde vamos guardar os produtos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O Array com os produtos. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{produtos_8h_ab56c7643f39d8384c18829bd20bc0e01}\label{produtos_8h_ab56c7643f39d8384c18829bd20bc0e01}} 
+\index{produtos.h@{produtos.h}!query2ProdAux@{query2ProdAux}}
+\index{query2ProdAux@{query2ProdAux}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{query2ProdAux()}{query2ProdAux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} query2\+Prod\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}}}]{a,  }\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{ar }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar de procura para a query 2. Esta percorre todos os nodos da A\+VL, adicionando todos os produtos que encontra ao Array passado. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & A A\+VL que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ar} & O Array onde vamos guardar os produtos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O Array com os produtos. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{produtos_8h_af3c47dc33aae5cabcf7a61701969a88e}\label{produtos_8h_af3c47dc33aae5cabcf7a61701969a88e}} 
+\index{produtos.h@{produtos.h}!query4Prod@{query4Prod}}
+\index{query4Prod@{query4Prod}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{query4Prod()}{query4Prod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} query4\+Prod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}}}]{c,  }\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{ar }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 4. Esta percorre todas as A\+V\+Ls do Catálogo de Produtos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & O Catálogo que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ar} & O Array onde vamos guardar os produtos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O Array com os produtos. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{produtos_8h_a4767faae23fdc8903aa22b60e07b4cde}\label{produtos_8h_a4767faae23fdc8903aa22b60e07b4cde}} 
+\index{produtos.h@{produtos.h}!query4ProdAux@{query4ProdAux}}
+\index{query4ProdAux@{query4ProdAux}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{query4ProdAux()}{query4ProdAux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} query4\+Prod\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}}}]{a,  }\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{ar }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 4. Esta percorre uma A\+VL, adicionando ao Array todos os produtos não vendidos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & A A\+VL que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ar} & O Array onde vamos guardar os produtos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O Array com os produtos. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{produtos_8h_a2eae5fb35e17b31aacdb1003be2b65ea}\label{produtos_8h_a2eae5fb35e17b31aacdb1003be2b65ea}} 
+\index{produtos.h@{produtos.h}!query6Prod@{query6Prod}}
+\index{query6Prod@{query6Prod}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{query6Prod()}{query6Prod()}}
+{\footnotesize\ttfamily int query6\+Prod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 6. Esta percorre todas as A\+V\+Ls do Catálogo de Produtos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & O Catálogo que vamos percorrer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de produtos não comprados. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{produtos_8h_a8c746a0d6b7d06cb9f4f6ebd1762b12a}\label{produtos_8h_a8c746a0d6b7d06cb9f4f6ebd1762b12a}} 
+\index{produtos.h@{produtos.h}!query6ProdAux@{query6ProdAux}}
+\index{query6ProdAux@{query6ProdAux}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{query6ProdAux()}{query6ProdAux()}}
+{\footnotesize\ttfamily void query6\+Prod\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}}}]{a,  }\item[{int $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 6. Esta percorre uma A\+VL, contando o número de produtos não vendidos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & A A\+VL que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em s} & Um apontador para um inteiro onde vamos guardar o número de produtos não vendidos. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{produtos_8h_ab8317f2e118ec906e7174075a8c2d2d0}\label{produtos_8h_ab8317f2e118ec906e7174075a8c2d2d0}} 
+\index{produtos.h@{produtos.h}!updateExisteP@{updateExisteP}}
+\index{updateExisteP@{updateExisteP}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{updateExisteP()}{updateExisteP()}}
+{\footnotesize\ttfamily void update\+ExisteP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{produtos_8h_a731411bd6ea315ca756b6113f2044643}{Cat\+Prods}}}]{c,  }\item[{char $\ast$}]{cod }\end{DoxyParamCaption})}
+
+
+
+Função de atualização do estado de um produto. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & O Catálogo de Produtos onde vamos procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & O código a procurar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{produtos_8h_ac3daca713b0600ff633d4d7ad27e92f1}\label{produtos_8h_ac3daca713b0600ff633d4d7ad27e92f1}} 
+\index{produtos.h@{produtos.h}!updateExistePAux@{updateExistePAux}}
+\index{updateExistePAux@{updateExistePAux}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{updateExistePAux()}{updateExistePAux()}}
+{\footnotesize\ttfamily void update\+Existe\+P\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{produtos_8h_a6c9c92316f78c7f032680174133b17ec}{A\+V\+L\+Prods}}}]{ap,  }\item[{char $\ast$}]{cod }\end{DoxyParamCaption})}
+
+
+
+Função de auxílio à atualização do estado de um produto. Quando o código é encontrado numa struct avl\+Prods, o valor é atualizado para true. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ap} & A A\+V\+L\+Prods onde vamos procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & O código a procurar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{produtos_8h_aa6b417c4dbc32828bf5cbc9d780996ca}\label{produtos_8h_aa6b417c4dbc32828bf5cbc9d780996ca}} 
+\index{produtos.h@{produtos.h}!validaProduto@{validaProduto}}
+\index{validaProduto@{validaProduto}!produtos.h@{produtos.h}}
+\subsubsection{\texorpdfstring{validaProduto()}{validaProduto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} valida\+Produto (\begin{DoxyParamCaption}\item[{char $\ast$}]{prod }\end{DoxyParamCaption})}
+
+
+
+Função de validação de um produto. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prod} & Um código de produto a ser validado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Um booleano que nos informa se o código é válido ou não 
+\end{DoxyReturn}

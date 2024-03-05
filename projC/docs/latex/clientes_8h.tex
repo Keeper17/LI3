@@ -1,0 +1,319 @@
+\hypertarget{clientes_8h}{}\section{/\+Users/tarly127/\+Documents/\+Git\+Hub/grupo54/grupo54/proj\+C/include/model/clientes.h File Reference}
+\label{clientes_8h}\index{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/model/clientes.h@{/Users/tarly127/Documents/GitHub/grupo54/grupo54/projC/include/model/clientes.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}bool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}listas.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{clientes_8h_a369266c24eacffb87046522897a570d5}\label{clientes_8h_a369266c24eacffb87046522897a570d5}} 
+\#define {\bfseries \+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE}
+\item 
+\mbox{\Hypertarget{clientes_8h_a848bb0e0fe1522d44344445c43d05bec}\label{clientes_8h_a848bb0e0fe1522d44344445c43d05bec}} 
+\#define {\bfseries M\+A\+X\+B\+U\+F\+S\+I\+ZE}~128
+\item 
+\mbox{\Hypertarget{clientes_8h_a437ef08681e7210d6678427030446a54}\label{clientes_8h_a437ef08681e7210d6678427030446a54}} 
+\#define {\bfseries L\+E\+FT}~-\/1
+\item 
+\mbox{\Hypertarget{clientes_8h_a521e6229e11c089d488ef795efcbcbda}\label{clientes_8h_a521e6229e11c089d488ef795efcbcbda}} 
+\#define {\bfseries B\+AL}~0
+\item 
+\mbox{\Hypertarget{clientes_8h_a80fb826a684cf3f0d306b22aa100ddac}\label{clientes_8h_a80fb826a684cf3f0d306b22aa100ddac}} 
+\#define {\bfseries R\+I\+G\+HT}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}\label{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}} 
+typedef struct avl\+Clientes $\ast$ \mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}}
+\begin{DoxyCompactList}\small\item\em Árvore Binária A\+VL onde são guardados os códigos de clientes, juntamente com um booleano que nos diz se o cliente comprou ou não. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}\label{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}} 
+typedef struct hash\+Clientes $\ast$ \mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}}
+\begin{DoxyCompactList}\small\item\em Estrutura semelhante a uma Hash Table onde guardamos os apontadores para as árvores dos clientes, sendo que guarda 26 árvores, uma para cada letra do alfabeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{clientes_8h_a7ab4a954ce46448f2c0716db5aae65cf}{valida\+Cliente}} (char $\ast$cliente)
+\begin{DoxyCompactList}\small\item\em Função de validação de um cliente. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{clientes_8h_a595729f22182a423f0c939d90df5fc10}{hashC}} (char $\ast$cliente)
+\begin{DoxyCompactList}\small\item\em Hash para o Catálogo de Clientes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{clientes_8h_a5c41f244973094a35e307ff41c348796}{existe\+Cliente}} (char $\ast$cod, \mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}} cp)
+\begin{DoxyCompactList}\small\item\em Funçãode verificação da existência de um cliente no catálogo de clientes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clientes_8h_a20cfe7d93bf057c034355c4f0cc34f6b}{update\+Existe\+C\+Aux}} (\mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}} ap, char $\ast$cod)
+\begin{DoxyCompactList}\small\item\em Função de auxílio à atualização do estado de um cliente. Quando o código é encontrado numa struct avl\+Clientes, o valor é atualizado para true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clientes_8h_a40b5a9e4172287871af41716d05d7b96}{update\+ExisteC}} (\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}} c, char $\ast$cod)
+\begin{DoxyCompactList}\small\item\em Função de atualização do estado de um cliente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clientes_8h_af696f5e106e3dd0616b26120dbb93665}{cl\+To\+Array\+Aux}} (\mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}} c, \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} r)
+\begin{DoxyCompactList}\small\item\em Função auxiliar para criar um Array com os clientes que efetuaram compras. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} \mbox{\hyperlink{clientes_8h_adcd423dccc8930d55f12aa6ab7515842}{cl\+To\+Array}} (\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}} c, \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} r)
+\begin{DoxyCompactList}\small\item\em Função para criar um Array com os clientes que efetuaram compras. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clientes_8h_a682ae51f46950b929ee68b542b7034c3}{query6\+Cli\+Aux}} (\mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}} a, int $\ast$i)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 6. Esta percorre uma A\+VL, contando o número de clientes que não compraram. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{clientes_8h_ae508d7f9295e55e8880214ecdaa0bcdd}{query6\+Cli}} (\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}} c)
+\begin{DoxyCompactList}\small\item\em Função de travessia para a query 6. Esta percorre todas as A\+V\+Ls do Catálogo de Clientes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}} \mbox{\hyperlink{clientes_8h_ad8d6c8ed8005a3592f365d58c2d7a319}{insert\+A\+V\+L\+Clientes}} (\mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}} $\ast$clientes, char $\ast$cliente)
+\begin{DoxyCompactList}\small\item\em Função de inserção numa árvore de procura balanceada. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}} \mbox{\hyperlink{clientes_8h_a7d992dda58fb3597312c24f09cd3603d}{insert\+Cat\+Clientes}} (\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}} cc, char $\ast$clientes)
+\begin{DoxyCompactList}\small\item\em Função de inserção num Catálogo de Clientes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clientes_8h_a2ede206405a128030dc7216d64e64188}{free\+A\+V\+L\+Clientes}} (\mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}} avl\+Clientes)
+\begin{DoxyCompactList}\small\item\em Função libertação de memória de uma A\+VL de clientes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clientes_8h_adb192f9d29f1b46d76c5de506a352ac9}{free\+Cat\+Clientes}} (\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}} cc)
+\begin{DoxyCompactList}\small\item\em Função libertação de memória de um Catálogo de Clientes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}} \mbox{\hyperlink{clientes_8h_a5d05efd119b6e9d123073a0c25ef8bfa}{init\+Cat\+Clientes}} ()
+\begin{DoxyCompactList}\small\item\em Função de Inicialização de um Catálogo de Clientes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funções relacionadas com as informações dos clientes. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{clientes_8h_adcd423dccc8930d55f12aa6ab7515842}\label{clientes_8h_adcd423dccc8930d55f12aa6ab7515842}} 
+\index{clientes.h@{clientes.h}!clToArray@{clToArray}}
+\index{clToArray@{clToArray}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{clToArray()}{clToArray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}} cl\+To\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}}}]{c,  }\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{r }\end{DoxyParamCaption})}
+
+
+
+Função para criar um Array com os clientes que efetuaram compras. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Catálogo com todas as A\+V\+Ls dos clientes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em r} & Array onde vamos guardar os clientes que efetuaram compras. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array com os clientes que efetuaram compras. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{clientes_8h_af696f5e106e3dd0616b26120dbb93665}\label{clientes_8h_af696f5e106e3dd0616b26120dbb93665}} 
+\index{clientes.h@{clientes.h}!clToArrayAux@{clToArrayAux}}
+\index{clToArrayAux@{clToArrayAux}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{clToArrayAux()}{clToArrayAux()}}
+{\footnotesize\ttfamily void cl\+To\+Array\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}}}]{c,  }\item[{\mbox{\hyperlink{listas_8h_a6a71d5c80222075499ce14630e57b437}{Array}}}]{r }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar para criar um Array com os clientes que efetuaram compras. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & A\+V\+L\+Clientes onde vamos procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em r} & Array onde vamos guardar os clientes que efetuaram compras. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{clientes_8h_a5c41f244973094a35e307ff41c348796}\label{clientes_8h_a5c41f244973094a35e307ff41c348796}} 
+\index{clientes.h@{clientes.h}!existeCliente@{existeCliente}}
+\index{existeCliente@{existeCliente}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{existeCliente()}{existeCliente()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} existe\+Cliente (\begin{DoxyParamCaption}\item[{char $\ast$}]{cod,  }\item[{\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}}}]{cp }\end{DoxyParamCaption})}
+
+
+
+Funçãode verificação da existência de um cliente no catálogo de clientes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cliente} & Um código de cliente \\
+\hline
+\mbox{\texttt{ in}}  & {\em cp} & O catálogo de clientes onde vamos procurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Se o código existe ou não. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{clientes_8h_a2ede206405a128030dc7216d64e64188}\label{clientes_8h_a2ede206405a128030dc7216d64e64188}} 
+\index{clientes.h@{clientes.h}!freeAVLClientes@{freeAVLClientes}}
+\index{freeAVLClientes@{freeAVLClientes}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{freeAVLClientes()}{freeAVLClientes()}}
+{\footnotesize\ttfamily void free\+A\+V\+L\+Clientes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}}}]{avl\+Clientes }\end{DoxyParamCaption})}
+
+
+
+Função libertação de memória de uma A\+VL de clientes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em avl\+Clientes} & A árvore cuja memória vamos libertar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{clientes_8h_adb192f9d29f1b46d76c5de506a352ac9}\label{clientes_8h_adb192f9d29f1b46d76c5de506a352ac9}} 
+\index{clientes.h@{clientes.h}!freeCatClientes@{freeCatClientes}}
+\index{freeCatClientes@{freeCatClientes}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{freeCatClientes()}{freeCatClientes()}}
+{\footnotesize\ttfamily void free\+Cat\+Clientes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}}}]{cc }\end{DoxyParamCaption})}
+
+
+
+Função libertação de memória de um Catálogo de Clientes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cc} & O Catálogo cuja memória vamos libertar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{clientes_8h_a595729f22182a423f0c939d90df5fc10}\label{clientes_8h_a595729f22182a423f0c939d90df5fc10}} 
+\index{clientes.h@{clientes.h}!hashC@{hashC}}
+\index{hashC@{hashC}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{hashC()}{hashC()}}
+{\footnotesize\ttfamily int hashC (\begin{DoxyParamCaption}\item[{char $\ast$}]{cliente }\end{DoxyParamCaption})}
+
+
+
+Hash para o Catálogo de Clientes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cliente} & Um código de cliente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int O hash desse cliente 
+\end{DoxyReturn}
+\mbox{\Hypertarget{clientes_8h_a5d05efd119b6e9d123073a0c25ef8bfa}\label{clientes_8h_a5d05efd119b6e9d123073a0c25ef8bfa}} 
+\index{clientes.h@{clientes.h}!initCatClientes@{initCatClientes}}
+\index{initCatClientes@{initCatClientes}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{initCatClientes()}{initCatClientes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}} init\+Cat\+Clientes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de Inicialização de um Catálogo de Clientes. 
+
+\begin{DoxyReturn}{Returns}
+Um novo catálogo de clientes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{clientes_8h_ad8d6c8ed8005a3592f365d58c2d7a319}\label{clientes_8h_ad8d6c8ed8005a3592f365d58c2d7a319}} 
+\index{clientes.h@{clientes.h}!insertAVLClientes@{insertAVLClientes}}
+\index{insertAVLClientes@{insertAVLClientes}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{insertAVLClientes()}{insertAVLClientes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}} insert\+A\+V\+L\+Clientes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}} $\ast$}]{clientes,  }\item[{char $\ast$}]{cliente }\end{DoxyParamCaption})}
+
+
+
+Função de inserção numa árvore de procura balanceada. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em clientes} & A árvore onde vamos inserir um cliente \\
+\hline
+\mbox{\texttt{ in}}  & {\em cliente} & O código que vamos inserir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A árvore nova com o novo código inserido e balanceada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{clientes_8h_a7d992dda58fb3597312c24f09cd3603d}\label{clientes_8h_a7d992dda58fb3597312c24f09cd3603d}} 
+\index{clientes.h@{clientes.h}!insertCatClientes@{insertCatClientes}}
+\index{insertCatClientes@{insertCatClientes}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{insertCatClientes()}{insertCatClientes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}} insert\+Cat\+Clientes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}}}]{cc,  }\item[{char $\ast$}]{clientes }\end{DoxyParamCaption})}
+
+
+
+Função de inserção num Catálogo de Clientes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cc} & O Catálogo onde vai ser feita a inserção. \\
+\hline
+\mbox{\texttt{ in}}  & {\em clientes} & O código que vamos inserir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O Catálogo com o novo cliente inserido. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{clientes_8h_ae508d7f9295e55e8880214ecdaa0bcdd}\label{clientes_8h_ae508d7f9295e55e8880214ecdaa0bcdd}} 
+\index{clientes.h@{clientes.h}!query6Cli@{query6Cli}}
+\index{query6Cli@{query6Cli}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{query6Cli()}{query6Cli()}}
+{\footnotesize\ttfamily int query6\+Cli (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 6. Esta percorre todas as A\+V\+Ls do Catálogo de Clientes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & O Catálogo que vamos percorrer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de clientes que não compraram. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{clientes_8h_a682ae51f46950b929ee68b542b7034c3}\label{clientes_8h_a682ae51f46950b929ee68b542b7034c3}} 
+\index{clientes.h@{clientes.h}!query6CliAux@{query6CliAux}}
+\index{query6CliAux@{query6CliAux}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{query6CliAux()}{query6CliAux()}}
+{\footnotesize\ttfamily void query6\+Cli\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}}}]{a,  }\item[{int $\ast$}]{i }\end{DoxyParamCaption})}
+
+
+
+Função de travessia para a query 6. Esta percorre uma A\+VL, contando o número de clientes que não compraram. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & A A\+VL que vamos percorrer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em s} & Um apontador para um inteiro onde vamos guardar o número de clientes que não compraram. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{clientes_8h_a40b5a9e4172287871af41716d05d7b96}\label{clientes_8h_a40b5a9e4172287871af41716d05d7b96}} 
+\index{clientes.h@{clientes.h}!updateExisteC@{updateExisteC}}
+\index{updateExisteC@{updateExisteC}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{updateExisteC()}{updateExisteC()}}
+{\footnotesize\ttfamily void update\+ExisteC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clientes_8h_a865f7ea37c98b75d8c0786b800efb974}{Cat\+Clientes}}}]{c,  }\item[{char $\ast$}]{cod }\end{DoxyParamCaption})}
+
+
+
+Função de atualização do estado de um cliente. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & O Catálogo de Clientes onde vamos procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & O código a procurar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{clientes_8h_a20cfe7d93bf057c034355c4f0cc34f6b}\label{clientes_8h_a20cfe7d93bf057c034355c4f0cc34f6b}} 
+\index{clientes.h@{clientes.h}!updateExisteCAux@{updateExisteCAux}}
+\index{updateExisteCAux@{updateExisteCAux}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{updateExisteCAux()}{updateExisteCAux()}}
+{\footnotesize\ttfamily void update\+Existe\+C\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clientes_8h_ab4c925e7c3bd12c239c0389e579de166}{A\+V\+L\+Clientes}}}]{ap,  }\item[{char $\ast$}]{cod }\end{DoxyParamCaption})}
+
+
+
+Função de auxílio à atualização do estado de um cliente. Quando o código é encontrado numa struct avl\+Clientes, o valor é atualizado para true. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ap} & A A\+V\+L\+Clientes onde vamos procurar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & O código a procurar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Se o Cliente existe ou não. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{clientes_8h_a7ab4a954ce46448f2c0716db5aae65cf}\label{clientes_8h_a7ab4a954ce46448f2c0716db5aae65cf}} 
+\index{clientes.h@{clientes.h}!validaCliente@{validaCliente}}
+\index{validaCliente@{validaCliente}!clientes.h@{clientes.h}}
+\subsubsection{\texorpdfstring{validaCliente()}{validaCliente()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} valida\+Cliente (\begin{DoxyParamCaption}\item[{char $\ast$}]{cliente }\end{DoxyParamCaption})}
+
+
+
+Função de validação de um cliente. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cliente} & Um código de cliente a ser validado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Um booleano que nos informa se o código é válido ou não 
+\end{DoxyReturn}

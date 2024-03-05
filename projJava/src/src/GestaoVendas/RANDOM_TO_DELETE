@@ -1,0 +1,5 @@
+Function<String,String[]> tokenize = str -> str.split(" ");
+
+        Predicate<String[]> filterFields =
+                fields ->
+                        cp.existeProduto(new Produto_Imp(fields[0])) && cc.existeCliente(new Cliente_Imp(fields[4]));
